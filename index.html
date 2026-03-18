@@ -56,15 +56,23 @@
 
 /* ═══ RESET ═══ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 body {
   font-family: var(--sans);
   background: var(--cream);
   color: var(--text);
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   line-height: 1.75;
+}
+/* Bulletproof horizontal overflow prevention */
+.page-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
@@ -127,6 +135,7 @@ a { text-decoration: none; color: inherit; }
   text-align: center;
   padding: 30px 0;
   position: relative;
+  overflow: hidden;
 }
 .feather-divider svg {
   width: 48px;
@@ -1388,6 +1397,8 @@ footer a:hover { color: var(--sage-light); }
 
 <body>
 
+<div class="page-wrapper">
+
 <!-- ═══ NAVIGATION ═══ -->
 <nav>
   <a href="#" class="nav-brand">feder<span>leicht</span></a>
@@ -1880,6 +1891,8 @@ footer a:hover { color: var(--sage-light); }
     <p style="text-align: center; font-size: .72rem; margin-top: 16px; opacity: .4;">Die Inhalte dieser Website ersetzen keine ärztliche oder psychotherapeutische Behandlung.</p>
   </div>
 </footer>
+
+</div><!-- /.page-wrapper -->
 
 <!-- ═══ JAVASCRIPT ═══ -->
 <script>
