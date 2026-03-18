@@ -2,374 +2,1731 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Federleicht — Dina Römgens | Raus aus dem Burnout, zurück ins Leben</title>
-<meta name="description" content="Ganzheitliches Burnout-Coaching mit Dina Römgens. Finde zurück zu Energie, innerer Stärke und einem Leben das sich wieder leicht anfühlt.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burnout überwinden — Federleicht | Dina Römgens</title>
+<meta name="description" content="Ganzheitliches Burnout-Coaching mit Dina Römgens. Finde zurück zu Energie und Lebensfreude — online, persönlich, nachhaltig.">
+<meta property="og:title" content="Federleicht — Burnout-Coaching mit Dina Römgens">
+<meta property="og:description" content="Ganzheitliches Burnout-Coaching. Finde zurück zu Energie und Lebensfreude.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthBusiness",
+  "name": "Federleicht — Dina Römgens",
+  "description": "Ganzheitliches Burnout-Coaching für Frauen",
+  "url": "https://federleicht.de",
+  "email": "info@federleicht.de",
+  "founder": {
+    "@type": "Person",
+    "name": "Dina Römgens",
+    "jobTitle": "Burnout-Coach & Heilpraktikerin"
+  },
+  "areaServed": "DE",
+  "serviceType": ["Burnout-Coaching", "Mikronährstoffberatung", "Mindset-Coaching"]
+}
+</script>
+
 <style>
-:root{--bg:#FDFBF7;--surface:#FFFFFF;--card:#F9F6F0;--border:#EDE8DF;--border-light:#DDD6C9;--text:#2D2A26;--text2:#4A4640;--muted:#7A756D;--dim:#AAA49A;--sage:#7A8B6F;--sage-dark:#5E6B54;--sage-bg:#F2F5EF;--sage-border:#D5DDCE;--warm:#C4956A;--warm-bg:#FDF5ED;--rose:#B07A7A;--rose-bg:#F9F0F0;--cream:#F0E8DA;--dark:#2D2A26;--serif:'Lora',Georgia,serif;--sans:'Nunito Sans',system-ui,sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}img{max-width:100%;display:block}.container{max-width:1080px;margin:0 auto;padding:0 24px}
+/* ═══ CUSTOM PROPERTIES ═══ */
+:root {
+  --sage: #7A8B6F;
+  --sage-light: #9AAD8E;
+  --sage-dark: #5F6D56;
+  --sage-bg: rgba(122,139,111,.08);
+  --cream: #FDFBF7;
+  --cream-warm: #F7F1E8;
+  --cream-dark: #EDE5D8;
+  --rose: #C4796A;
+  --rose-light: #E8A99C;
+  --rose-bg: rgba(196,121,106,.06);
+  --brown-warm: #C4956A;
+  --text: #3D3830;
+  --text-soft: #6B6259;
+  --text-light: #9A8F84;
+  --white: #FFFFFF;
+  --serif: 'Lora', Georgia, serif;
+  --sans: 'Nunito Sans', 'Segoe UI', sans-serif;
+}
 
-/* Animations */
-.feather-svg{position:absolute;pointer-events:none;opacity:.05;z-index:0}
-.feather-float{animation:featherDrift 14s ease-in-out infinite}
-@keyframes featherDrift{0%{transform:translateY(0) rotate(0deg)}25%{transform:translateY(-14px) rotate(4deg)}50%{transform:translateY(6px) rotate(-3deg)}75%{transform:translateY(-10px) rotate(2deg)}100%{transform:translateY(0) rotate(0deg)}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-@keyframes scaleIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
-.reveal{opacity:0;transform:translateY(24px);transition:all .7s cubic-bezier(.16,1,.3,1)}.reveal.visible{opacity:1;transform:translateY(0)}
+/* ═══ RESET ═══ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  line-height: 1.75;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
 
-/* Feather divider */
-.f-div{text-align:center;padding:28px 0}.f-div svg{display:inline-block;opacity:.12}
+/* ═══ UTILITIES ═══ */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 90px 0; }
+.section-label {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  max-width: 580px;
+  line-height: 1.75;
+}
 
-/* ═══ HEADER ═══ */
-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,251,247,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:12px 0;transition:all .3s}
-header .container{display:flex;justify-content:space-between;align-items:center}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-mark svg{width:28px;height:28px;color:var(--sage)}
-.logo-text{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--text)}
-.logo-sub{font-size:9px;color:var(--dim);font-family:var(--sans);display:block;margin-top:-2px;letter-spacing:.02em}
-nav{display:flex;align-items:center;gap:24px}nav a{font-size:14px;color:var(--muted);text-decoration:none;font-weight:500;transition:color .2s}nav a:hover{color:var(--text)}
-.nav-cta{background:var(--sage);color:#fff;font-weight:600;font-size:13px;padding:10px 24px;border-radius:100px;text-decoration:none;transition:all .2s;box-shadow:0 2px 8px rgba(122,139,111,.15)}.nav-cta:hover{background:var(--sage-dark);transform:translateY(-1px)}
+/* ═══ REVEAL ANIMATION ═══ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══ FEATHER SVG BG DECORATION ═══ */
+.feather-deco {
+  position: absolute;
+  opacity: .04;
+  pointer-events: none;
+  z-index: 0;
+}
+.feather-float {
+  animation: featherFloat 8s ease-in-out infinite;
+}
+@keyframes featherFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(3deg); }
+}
+
+/* ═══ FEATHER DIVIDER ═══ */
+.feather-divider {
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+.feather-divider svg {
+  width: 48px;
+  height: 48px;
+  color: var(--sage);
+  opacity: .35;
+}
+.feather-divider::before,
+.feather-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--sage-light), transparent);
+  opacity: .3;
+}
+.feather-divider::before { right: calc(50% + 40px); }
+.feather-divider::after { left: calc(50% + 40px); }
+
+/* ═══ NAV ═══ */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(253,251,247,.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(122,139,111,.08);
+  transition: padding .4s, box-shadow .4s;
+}
+nav.scrolled {
+  padding: 12px 40px;
+  box-shadow: 0 2px 20px rgba(0,0,0,.04);
+}
+.nav-brand {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: .01em;
+}
+.nav-brand span { color: var(--sage); }
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.nav-links a {
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  transition: color .3s;
+  letter-spacing: .02em;
+}
+.nav-links a:hover { color: var(--sage); }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--sage);
+  color: var(--white) !important;
+  padding: 10px 22px;
+  border-radius: 100px;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  transition: all .3s;
+}
+.nav-cta:hover {
+  background: var(--sage-dark);
+  transform: translateY(-1px);
+}
+
+/* Mobile nav */
+@media (max-width: 900px) {
+  .nav-links a:not(.nav-cta) { display: none; }
+  nav { padding: 14px 20px; }
+  nav.scrolled { padding: 10px 20px; }
+}
 
 /* ═══ HERO ═══ */
-.hero{padding:130px 24px 40px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:800px;background:linear-gradient(170deg,var(--cream) 0%,#F5EFE3 40%,var(--bg) 100%);z-index:0}
-.hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--sage-border);padding:6px 16px;border-radius:100px;font-size:12px;color:var(--sage);font-weight:600;margin-bottom:20px;animation:fadeUp .6s ease both}
-.hero h1{font-family:var(--serif);font-size:clamp(32px,4.2vw,46px);font-weight:700;line-height:1.18;margin-bottom:18px;animation:fadeUp .6s ease .15s both}
-.hero h1 em{font-style:italic;color:var(--sage)}
-.hero-sub{font-size:17px;color:var(--text2);line-height:1.75;margin-bottom:24px;max-width:460px;animation:fadeUp .6s ease .3s both}
-.hero-sub strong{color:var(--sage);font-weight:600}
-.hero-trust{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:28px;animation:fadeUp .6s ease .35s both}
-.hero-trust span{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);font-weight:500}
-.hero-trust i{width:16px;height:16px;color:var(--sage)}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .6s ease .45s both}
-.btn-primary{background:var(--sage);color:#fff;font-weight:600;font-size:15px;padding:15px 32px;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .25s;font-family:var(--sans);box-shadow:0 2px 12px rgba(122,139,111,.2)}.btn-primary:hover{background:var(--sage-dark);transform:translateY(-2px);box-shadow:0 6px 24px rgba(122,139,111,.3)}
-.btn-secondary{border:1.5px solid var(--border-light);color:var(--text2);font-weight:500;font-size:15px;padding:15px 28px;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .2s;background:var(--surface)}.btn-secondary:hover{border-color:var(--sage);color:var(--sage)}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+  background: var(--cream);
+}
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.hero-content { position: relative; z-index: 2; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--sage-bg);
+  border: 1px solid rgba(122,139,111,.15);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--sage);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.hero-badge .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--sage);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .4; }
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: 3.2rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--sage);
+}
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+.hero-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--sage);
+  color: var(--white);
+  padding: 14px 30px;
+  border-radius: 100px;
+  font-size: .9rem;
+  font-weight: 700;
+  font-family: var(--sans);
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+  letter-spacing: .02em;
+}
+.btn-primary:hover {
+  background: var(--sage-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(122,139,111,.25);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text);
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-size: .9rem;
+  font-weight: 600;
+  font-family: var(--sans);
+  border: 1.5px solid var(--cream-dark);
+  cursor: pointer;
+  transition: all .3s;
+}
+.btn-secondary:hover {
+  border-color: var(--sage-light);
+  color: var(--sage);
+}
+.hero-trust {
+  display: flex;
+  gap: 24px;
+  font-size: .8rem;
+  color: var(--text-light);
+}
+.hero-trust span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-trust i {
+  width: 16px;
+  height: 16px;
+  color: var(--sage);
+}
+.hero-image {
+  position: relative;
+  z-index: 2;
+}
+.hero-image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.08);
+}
+.hero-image::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  border: 2px solid var(--sage-light);
+  opacity: .2;
+  z-index: -1;
+}
+/* Floating feathers in hero */
+.hero-feather-1 {
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  opacity: .06;
+  z-index: 1;
+  animation: featherFloat 7s ease-in-out infinite;
+}
+.hero-feather-2 {
+  position: absolute;
+  bottom: 20%;
+  left: 3%;
+  opacity: .04;
+  z-index: 1;
+  animation: featherFloat 9s ease-in-out infinite 2s;
+}
 
-/* Hero image composition */
-.hero-visual{position:relative;animation:fadeUp .8s ease .5s both}
-.hero-img-main{width:100%;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.08)}
-.hero-img-main img{width:100%;height:520px;object-fit:cover;object-position:center top}
-.hero-img-small{position:absolute;bottom:-20px;left:-24px;width:160px;height:200px;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.1);border:4px solid var(--bg);z-index:3;animation:float 5s ease-in-out 2s infinite}
-.hero-img-small img{width:100%;height:100%;object-fit:cover}
-.hero-float{position:absolute;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:12px 16px;box-shadow:0 4px 20px rgba(0,0,0,.06);display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;animation:float 4s ease-in-out infinite;z-index:4}
-.hero-float.a{top:20px;right:-12px;color:var(--sage)}
-.hero-float i{width:18px;height:18px}
+@media (max-width: 900px) {
+  .hero .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2.2rem; }
+  .hero-ctas { justify-content: center; }
+  .hero-trust { justify-content: center; }
+  .hero-sub { margin: 0 auto 32px; }
+  .hero-image img { height: 350px; }
+  .hero-image::after { display: none; }
+}
 
-/* ═══ IMAGE BAND ═══ */
-.img-band{width:100%;height:280px;position:relative;overflow:hidden}
-.img-band img{width:100%;height:100%;object-fit:cover}
-.img-band-overlay{position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0%,rgba(0,0,0,.25) 30%,rgba(0,0,0,.25) 70%,var(--bg) 100%)}
-.img-band-text{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;text-align:center;padding:0 24px}
-.img-band-text h2{font-family:var(--serif);font-size:clamp(20px,2.8vw,30px);font-weight:600;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.3);max-width:540px;line-height:1.4;font-style:italic}
+/* ═══ PAIN / "KENNST DU DAS?" ═══ */
+.pain {
+  background: var(--cream-warm);
+  position: relative;
+  overflow: hidden;
+}
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.pain-card {
+  background: var(--white);
+  border: 1px solid rgba(196,121,106,.1);
+  border-radius: 16px;
+  padding: 28px 24px;
+  position: relative;
+  transition: transform .3s, box-shadow .3s;
+}
+.pain-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+.pain-card .icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--rose-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.pain-card .icon-wrap i {
+  width: 22px;
+  height: 22px;
+  color: var(--rose);
+}
+.pain-card h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+.pain-card p {
+  font-size: .9rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
 
-/* ═══ SECTIONS ═══ */
-section{padding:80px 0;position:relative}
-.badge{display:inline-flex;align-items:center;gap:6px;background:var(--sage-bg);border:1px solid var(--sage-border);padding:5px 14px;border-radius:100px;font-size:11px;color:var(--sage);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}.badge i{width:13px;height:13px}
-.badge.warm{background:var(--warm-bg);border-color:#E8D5C0;color:var(--warm)}
-.badge.rose{background:var(--rose-bg);border-color:#E0CECE;color:var(--rose)}
-.stitle{font-family:var(--serif);font-size:clamp(26px,3.5vw,36px);font-weight:700;line-height:1.25;margin-bottom:14px}
-.ssub{font-size:16px;color:var(--muted);max-width:520px;line-height:1.7}
-
-/* ═══ SYMPTOM CHECK ═══ */
-.check{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.check-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start;margin-top:32px}
-.check-img{border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.06)}
-.check-img img{width:100%;height:100%;min-height:420px;object-fit:cover}
-.check-grid{display:flex;flex-direction:column;gap:10px}
-.check-card{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:var(--bg);border:1.5px solid var(--border);border-radius:12px;cursor:pointer;transition:all .25s;user-select:none}
-.check-card:hover{border-color:#D4C9B8}
-.check-card.active{border-color:var(--rose);background:var(--rose-bg)}
-.check-box{width:20px;height:20px;border-radius:5px;border:2px solid var(--border-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;transition:all .2s}
-.check-card.active .check-box{background:var(--rose);border-color:var(--rose);color:#fff}
-.check-card.active .check-box svg{display:block}.check-box svg{display:none;width:12px;height:12px}
-.check-label{font-size:14px;color:var(--text2);line-height:1.5}.check-card.active .check-label{color:var(--rose)}
-.check-result{margin-top:20px;min-height:60px}
-.check-result-inner{background:var(--sage-bg);border:1px solid var(--sage-border);border-radius:14px;padding:20px;display:none}
-.check-result-inner.show{display:block;animation:fadeUp .4s ease both}
-.check-result-inner h4{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--sage);margin-bottom:4px}
-.check-result-inner p{font-size:14px;color:var(--text2)}
-.check-result-inner a{color:var(--sage);font-weight:700;text-decoration:underline}
-.check-hint{font-size:11px;color:var(--dim);margin-top:8px}
+@media (max-width: 900px) {
+  .pain-grid { grid-template-columns: 1fr; }
+}
 
 /* ═══ TRANSFORMATION ═══ */
-.transform-pairs{display:flex;flex-direction:column;gap:10px;margin-top:36px;max-width:600px;margin-left:auto;margin-right:auto}
-.transform-pair{display:grid;grid-template-columns:1fr 40px 1fr;gap:8px;align-items:center}
-.t-from{background:var(--rose-bg);border:1px solid #E0CECE;border-radius:10px;padding:12px 16px;font-size:14px;color:var(--rose);text-align:right}
-.t-arrow{color:var(--sage);display:flex;align-items:center;justify-content:center}
-.t-to{background:var(--sage-bg);border:1px solid var(--sage-border);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--sage-dark);font-weight:600}
+.transformation { background: var(--cream); }
+.transform-pairs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.transform-pair {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid rgba(122,139,111,.08);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform .3s;
+}
+.transform-pair:hover { transform: translateY(-2px); }
+.transform-from {
+  background: var(--rose-bg);
+  border: 1px solid rgba(196,121,106,.12);
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--rose);
+  white-space: nowrap;
+  min-width: 140px;
+  text-align: center;
+}
+.transform-arrow {
+  color: var(--sage);
+  flex-shrink: 0;
+}
+.transform-arrow i { width: 20px; height: 20px; }
+.transform-to {
+  background: var(--sage-bg);
+  border: 1px solid rgba(122,139,111,.15);
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--sage-dark);
+  white-space: nowrap;
+  min-width: 140px;
+  text-align: center;
+}
 
-/* ═══ ABOUT ═══ */
-.about{background:linear-gradient(135deg,var(--cream) 0%,#F3EBDB 100%);position:relative;overflow:hidden}
-.about-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center;margin-top:32px}
-.about-img-wrap{position:relative}
-.about-img{border-radius:20px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.08)}
-.about-img img{width:100%;height:520px;object-fit:cover;object-position:center top}
-.about-accent{position:absolute;top:-12px;left:-12px;width:100%;height:100%;border:2px solid var(--sage);border-radius:20px;opacity:.15;z-index:-1}
-.about-text p{font-size:15px;color:var(--text2);line-height:1.85;margin-bottom:16px}
-.about-text p strong{color:var(--text);font-weight:600}
-.about-text .highlight{background:linear-gradient(transparent 60%,rgba(122,139,111,.12) 60%);padding:0 2px}
-.about-sig{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--warm);margin-top:12px}
+@media (max-width: 900px) {
+  .transform-pairs { grid-template-columns: 1fr; }
+  .transform-pair { flex-direction: column; text-align: center; gap: 10px; }
+  .transform-from, .transform-to { min-width: unset; width: 100%; }
+}
 
-/* ═══ METHOD ═══ */
-.method-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
-.m-step{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px 18px;text-align:center;transition:all .3s;position:relative;overflow:hidden}
-.m-step:hover{border-color:var(--sage-border);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.05)}
-.m-step::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--sage),var(--sage-dark));transform:scaleX(0);transition:transform .3s;transform-origin:left}.m-step:hover::before{transform:scaleX(1)}
-.m-num{font-family:var(--serif);font-size:42px;font-weight:700;color:var(--sage);opacity:.1;line-height:1;margin-bottom:4px}
-.m-ico{width:48px;height:48px;border-radius:50%;background:var(--sage-bg);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:var(--sage)}
-.m-step h4{font-size:15px;font-weight:700;margin-bottom:6px}
-.m-step p{font-size:13px;color:var(--muted);line-height:1.6}
+/* ═══ STORY ═══ */
+.story {
+  background: var(--cream-warm);
+  position: relative;
+  overflow: hidden;
+}
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+.story-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 16px 48px rgba(0,0,0,.06);
+}
+.story-content blockquote {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 24px;
+  position: relative;
+  padding-left: 24px;
+  border-left: 3px solid var(--sage-light);
+}
+.story-content p {
+  font-size: .95rem;
+  color: var(--text-soft);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.story-content .story-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-top: 20px;
+}
+.story-content .story-role {
+  font-size: .82rem;
+  color: var(--sage);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .story-image img { height: 320px; }
+}
+
+/* ═══ VISUAL BREAK / BILDBAND ═══ */
+.visual-break {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+.visual-break img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.visual-break .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(122,139,111,.85), rgba(95,109,86,.75));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+.visual-break .overlay p {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--white);
+  max-width: 600px;
+  line-height: 1.5;
+  opacity: .95;
+}
+
+@media (max-width: 500px) {
+  .visual-break .overlay p { font-size: 1.3rem; }
+}
+
+/* ═══ METHOD / 4 SCHRITTE ═══ */
+.method { background: var(--cream); }
+.method-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+}
+.method-step {
+  text-align: center;
+  padding: 32px 20px;
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid rgba(122,139,111,.08);
+  position: relative;
+  transition: transform .3s, box-shadow .3s;
+}
+.method-step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.06);
+}
+.method-step .step-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.method-step .icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--sage-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+.method-step .icon-wrap i {
+  width: 24px;
+  height: 24px;
+  color: var(--sage);
+}
+.method-step h3 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+.method-step p {
+  font-size: .85rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+/* Connector lines */
+.method-step::after {
+  content: '';
+  position: absolute;
+  top: 54px;
+  right: -12px;
+  width: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--sage-light), transparent);
+  opacity: .3;
+}
+.method-step:last-child::after { display: none; }
+
+@media (max-width: 900px) {
+  .method-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .method-step::after { display: none; }
+}
+@media (max-width: 500px) {
+  .method-steps { grid-template-columns: 1fr; }
+}
+
+/* ═══ LEISTUNGEN ═══ */
+.services { background: var(--cream-warm); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.service-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 36px 28px;
+  border: 1px solid rgba(122,139,111,.08);
+  transition: transform .3s, box-shadow .3s;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.06);
+}
+.service-card .icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--sage-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.service-card .icon-wrap i {
+  width: 26px;
+  height: 26px;
+  color: var(--sage);
+}
+.service-card h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.service-card p {
+  font-size: .9rem;
+  color: var(--text-soft);
+  line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: 1fr; }
+}
+
+/* ═══ SYMPTOM CHECK ═══ */
+.symptom-check { background: var(--cream); }
+.symptom-check-box {
+  max-width: 700px;
+  margin: 40px auto 0;
+  background: var(--white);
+  border-radius: 24px;
+  padding: 40px;
+  border: 1px solid rgba(122,139,111,.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,.04);
+}
+.symptom-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.symptom-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1.5px solid var(--cream-dark);
+  cursor: pointer;
+  transition: all .3s;
+  user-select: none;
+}
+.symptom-item:hover {
+  border-color: var(--sage-light);
+  background: var(--sage-bg);
+}
+.symptom-item.active {
+  border-color: var(--sage);
+  background: var(--sage-bg);
+}
+.symptom-item .check {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all .3s;
+}
+.symptom-item.active .check {
+  background: var(--sage);
+  border-color: var(--sage);
+}
+.symptom-item.active .check i {
+  color: var(--white);
+  width: 14px;
+  height: 14px;
+}
+.symptom-item .check i { display: none; }
+.symptom-item.active .check i { display: block; }
+.symptom-item span {
+  font-size: .9rem;
+  color: var(--text);
+  font-weight: 500;
+}
+.symptom-result {
+  display: none;
+  text-align: center;
+  padding: 28px;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+.symptom-result.show { display: block; }
+.symptom-result.level-1 { background: rgba(122,139,111,.06); border: 1px solid rgba(122,139,111,.15); }
+.symptom-result.level-2 { background: rgba(196,158,106,.06); border: 1px solid rgba(196,158,106,.2); }
+.symptom-result.level-3 { background: var(--rose-bg); border: 1px solid rgba(196,121,106,.15); }
+.symptom-result h4 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+.symptom-result p {
+  font-size: .9rem;
+  color: var(--text-soft);
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+.symptom-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--sage);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-size: .85rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: all .3s;
+}
+.symptom-btn:hover {
+  background: var(--sage-dark);
+}
+
+@media (max-width: 600px) {
+  .symptom-list { grid-template-columns: 1fr; }
+  .symptom-check-box { padding: 24px; }
+}
 
 /* ═══ TESTIMONIALS ═══ */
-.testi{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
-.testi-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:28px 24px;position:relative;transition:all .3s}
-.testi-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.04)}
-.testi-quote{position:absolute;top:14px;right:18px;font-family:var(--serif);font-size:52px;color:var(--sage);opacity:.08;line-height:1}
-.testi-transform{display:inline-flex;align-items:center;gap:4px;background:var(--sage-bg);border:1px solid var(--sage-border);padding:4px 10px;border-radius:6px;font-size:11px;color:var(--sage);font-weight:600;margin-bottom:12px}
-.testi-text{font-size:14px;color:var(--text2);line-height:1.75;font-style:italic;margin-bottom:16px;position:relative;z-index:1}
-.testi-author{display:flex;align-items:center;gap:12px}
-.testi-avatar{width:48px;height:48px;border-radius:50%;overflow:hidden;border:2px solid var(--sage-bg)}
-.testi-avatar img{width:100%;height:100%;object-fit:cover}
-.testi-name{font-size:14px;font-weight:700}.testi-role{font-size:12px;color:var(--dim)}
+.testimonials { background: var(--cream-warm); }
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.testimonial-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 32px 26px;
+  border: 1px solid rgba(122,139,111,.08);
+  position: relative;
+  transition: transform .3s;
+}
+.testimonial-card:hover { transform: translateY(-3px); }
+.testimonial-card .stars {
+  color: #E8B84A;
+  font-size: .9rem;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+.testimonial-card .transform-label {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+.testimonial-card .transform-label.from {
+  background: var(--rose-bg);
+  color: var(--rose);
+}
+.testimonial-card .transform-label.arrow { color: var(--text-light); margin: 0 4px; background: none; padding: 0; }
+.testimonial-card .transform-label.to {
+  background: var(--sage-bg);
+  color: var(--sage-dark);
+}
+.testimonial-card blockquote {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.testimonial-card .author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.testimonial-card .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--sage-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--sage);
+}
+.testimonial-card .author-info .name {
+  font-weight: 700;
+  font-size: .85rem;
+  color: var(--text);
+}
+.testimonial-card .author-info .detail {
+  font-size: .75rem;
+  color: var(--text-light);
+}
 
-/* ═══ CTA ═══ */
-.cta-section{padding:100px 0;text-align:center;background:linear-gradient(180deg,var(--bg) 0%,var(--cream) 100%);position:relative;overflow:hidden}
-.cta-section .stitle{max-width:520px;margin:0 auto 14px}
-.cta-section .ssub{max-width:460px;margin:0 auto 32px;text-align:center}
-.cta-flow{display:flex;justify-content:center;gap:20px;margin-bottom:40px;flex-wrap:wrap;align-items:center}
-.cta-flow-step{display:flex;flex-direction:column;align-items:center;gap:6px}
-.cta-flow-num{width:34px;height:34px;border-radius:50%;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
-.cta-flow-label{font-size:12px;color:var(--muted);font-weight:500}
-.cta-flow-arrow{color:var(--dim)}
+@media (max-width: 900px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
 
-.contact-form{max-width:440px;margin:0 auto;text-align:left;background:var(--surface);padding:32px;border-radius:20px;border:1px solid var(--border);box-shadow:0 8px 32px rgba(0,0,0,.04)}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.form-row{margin-bottom:12px}
-.form-row label{display:block;font-size:12px;font-weight:600;color:var(--text2);margin-bottom:4px}
-.form-row input,.form-row textarea{width:100%;background:var(--card);border:1.5px solid var(--border);color:var(--text);padding:12px 14px;font-size:14px;border-radius:12px;outline:none;font-family:var(--sans);transition:all .2s}
-.form-row input:focus,.form-row textarea:focus{border-color:var(--sage);box-shadow:0 0 0 3px rgba(122,139,111,.08);background:var(--surface)}
-.form-row textarea{resize:vertical;min-height:70px}
-.form-submit{width:100%;background:var(--sage);color:#fff;font-weight:700;font-size:15px;padding:15px;border:none;border-radius:100px;cursor:pointer;transition:all .2s;margin-top:4px;display:flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);box-shadow:0 2px 12px rgba(122,139,111,.2)}.form-submit:hover{background:var(--sage-dark);transform:translateY(-1px)}
-.form-promise{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:20px}
-.form-promise span{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:5px}
-.form-promise i{color:var(--sage);width:14px;height:14px}
+/* ═══ PROCESS / ERSTTERMIN ═══ */
+.first-session { background: var(--cream); }
+.session-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.session-step {
+  text-align: center;
+  padding: 32px 24px;
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid rgba(122,139,111,.08);
+}
+.session-step .step-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--sage-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.session-step .step-icon i {
+  width: 26px;
+  height: 26px;
+  color: var(--sage);
+}
+.session-step h3 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.session-step .duration {
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--sage);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.session-step p {
+  font-size: .85rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .session-steps { grid-template-columns: 1fr; }
+}
+
+/* ═══ CONTACT ═══ */
+.contact {
+  background: var(--cream-warm);
+  position: relative;
+  overflow: hidden;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.contact-text h2 {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.contact-text h2 em {
+  font-style: italic;
+  color: var(--sage);
+}
+.contact-text p {
+  color: var(--text-soft);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+.contact-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact-trust span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .85rem;
+  color: var(--text-soft);
+}
+.contact-trust i {
+  width: 18px;
+  height: 18px;
+  color: var(--sage);
+}
+.contact-form {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 36px;
+  border: 1px solid rgba(122,139,111,.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,.04);
+}
+.form-group {
+  margin-bottom: 18px;
+}
+.form-group label {
+  display: block;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--cream-dark);
+  border-radius: 12px;
+  font-size: .9rem;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--cream);
+  transition: border-color .3s;
+  outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--sage);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.form-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--sage);
+  color: var(--white);
+  border: none;
+  border-radius: 100px;
+  font-size: .9rem;
+  font-weight: 700;
+  font-family: var(--sans);
+  cursor: pointer;
+  transition: all .3s;
+  letter-spacing: .02em;
+}
+.form-submit:hover {
+  background: var(--sage-dark);
+  transform: translateY(-1px);
+}
+.form-note {
+  text-align: center;
+  font-size: .75rem;
+  color: var(--text-light);
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
 
 /* ═══ FOOTER ═══ */
-footer{background:var(--dark);color:#AAA49A;padding:48px 0 32px}
-footer .container{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px}
-.footer-brand .logo-text{color:var(--cream)}.footer-brand .logo-sub{color:#5A5650}
-.footer-tagline{font-size:12px;color:#5A5650;margin-top:12px;line-height:1.6;max-width:260px}
-.footer-links{display:flex;gap:24px}.footer-links a{font-size:13px;color:#7A756D;text-decoration:none;transition:color .2s}.footer-links a:hover{color:var(--cream)}
-.footer-bottom{text-align:center;margin-top:32px;padding-top:24px;border-top:1px solid #3D3935;font-size:11px;color:#5A5650}
-.footer-note{text-align:center;margin-top:12px;font-size:10px;color:#4A4640;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.5}
-
-/* ═══ RESPONSIVE ═══ */
-@media(max-width:900px){
-  .hero .container,.about-layout,.check-layout{grid-template-columns:1fr}
-  .hero{text-align:center}.hero-sub{margin:0 auto 24px}.hero-trust{justify-content:center}.hero-actions{justify-content:center}
-  .hero-visual{margin-top:32px}.hero-img-main img{height:360px}.hero-img-small{display:none}.hero-float{display:none}
-  .check-img{display:none}
-  .transform-pair{grid-template-columns:1fr;gap:4px;text-align:center}.t-from,.t-to{text-align:center}.t-arrow{transform:rotate(90deg)}
-  .method-steps,.testi-grid{grid-template-columns:1fr}
-  .about-layout{gap:24px}.about-img img{height:360px}.about-accent{display:none}
-  .form-grid{grid-template-columns:1fr}
-  nav a:not(.nav-cta){display:none}
-  footer .container{flex-direction:column;align-items:center;text-align:center}
-  .feather-svg{display:none}
-  .cta-flow-arrow{display:none}.cta-flow{gap:16px}
-  .img-band{height:200px}
+footer {
+  background: var(--text);
+  color: rgba(255,255,255,.6);
+  padding: 60px 0 30px;
 }
-@media(max-width:500px){
-  .hero-actions{flex-direction:column;align-items:center}
-  .btn-primary,.btn-secondary{width:100%;justify-content:center}
-  .contact-form{padding:24px 20px}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.footer-brand span { color: var(--sage-light); }
+footer p { font-size: .85rem; line-height: 1.7; }
+footer h4 {
+  color: var(--white);
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 16px;
+}
+footer a {
+  display: block;
+  font-size: .85rem;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 8px;
+  transition: color .3s;
+}
+footer a:hover { color: var(--sage-light); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .78rem;
+}
+.footer-bottom a { display: inline; margin-left: 16px; }
+.footer-crisis {
+  background: rgba(255,255,255,.04);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 20px;
+  font-size: .8rem;
+  line-height: 1.7;
+}
+.footer-crisis strong {
+  color: rgba(255,255,255,.8);
+}
+
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+/* ═══ MOBILE EXTRAS ═══ */
+@media (max-width: 500px) {
+  .section { padding: 60px 0; }
+  .section-title { font-size: 1.8rem; }
+  .hero h1 { font-size: 1.9rem; }
+  .hero { padding-top: 60px; }
+  .visual-break { height: 220px; }
 }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthBusiness","name":"Federleicht — Dina Römgens","description":"Ganzheitliches Burnout-Coaching","url":"https://www.dina-roemgens.com","founder":{"@type":"Person","name":"Dina Römgens"},"serviceType":["Burnout-Coaching","Gesundheitsberatung","Mikronährstoffberatung"]}</script>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header>
-<div class="container">
-  <a href="#" class="logo">
-    <div class="logo-mark"><svg viewBox="0 0 32 32" fill="none"><path d="M16 2C16 2 8 10 8 18C8 22.4 11.6 26 16 26C20.4 26 24 22.4 24 18C24 10 16 2 16 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M16 26V30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M16 10V22" stroke="currentColor" stroke-width="1" opacity=".3"/></svg></div>
-    <div><span class="logo-text">Federleicht</span><span class="logo-sub">Dina Römgens · Heilpraktikerin</span></div>
-  </a>
-  <nav><a href="#methode">Methode</a><a href="#ueber">Über mich</a><a href="#stimmen">Kundenstimmen</a><a href="#kontakt" class="nav-cta">Erstgespräch buchen</a></nav>
-</div>
-</header>
+<!-- ═══ NAVIGATION ═══ -->
+<nav>
+  <a href="#" class="nav-brand">feder<span>leicht</span></a>
+  <div class="nav-links">
+    <a href="#methode">Methode</a>
+    <a href="#ueber">Über mich</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#stimmen">Kundenstimmen</a>
+    <a href="#kontakt" class="nav-cta">Lass uns reden</a>
+  </div>
+</nav>
 
-<!-- HERO -->
+<!-- ═══ HERO ═══ -->
 <section class="hero">
-<svg class="feather-svg feather-float" style="top:12%;left:6%;width:64px" viewBox="0 0 40 80" fill="none"><path d="M20 2C20 2 8 18 8 36C8 48 13 58 20 62C27 58 32 48 32 36C32 18 20 2 20 2Z" stroke="#7A8B6F" stroke-width="1" fill="none"/><path d="M20 12V56" stroke="#7A8B6F" stroke-width=".5"/></svg>
-<svg class="feather-svg feather-float" style="top:55%;right:4%;width:48px;animation-delay:4s" viewBox="0 0 40 80" fill="none"><path d="M20 2C20 2 8 18 8 36C8 48 13 58 20 62C27 58 32 48 32 36C32 18 20 2 20 2Z" stroke="#7A8B6F" stroke-width="1" fill="none"/><path d="M20 12V56" stroke="#7A8B6F" stroke-width=".5"/></svg>
-<div class="container">
-  <div>
-    <div class="hero-badge"><i data-lucide="feather"></i> Ganzheitliches Burnout-Coaching</div>
-    <h1>Raus aus dem Burnout.<br>Zurück in <em>dein Leben.</em></h1>
-    <p class="hero-sub">Du funktionierst nur noch, aber lebst nicht mehr? Ich begleite dich zurück zu Energie, innerer Stärke und einem Alltag, der sich wieder <strong>federleicht</strong> anfühlt.</p>
-    <div class="hero-trust"><span><i data-lucide="shield-check"></i> Heilpraktikerin</span><span><i data-lucide="heart"></i> Eigene Burnout-Erfahrung</span><span><i data-lucide="video"></i> Online · ortsunabhängig</span></div>
-    <div class="hero-actions">
-      <a href="#kontakt" class="btn-primary"><i data-lucide="calendar" style="width:18px;height:18px"></i> Kostenloses Erstgespräch</a>
-      <a href="#selbsttest" class="btn-secondary"><i data-lucide="clipboard-check" style="width:18px;height:18px"></i> Burnout-Selbsttest</a>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-img-main"><img src="https://onecdn.io/media/d62e9bfb-8640-421f-b388-e6f4354e9a65/preview" alt="Dina Römgens — Heilpraktikerin und Burnout-Coach" loading="eager"></div>
-    <div class="hero-img-small"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=300&q=80" alt="Innere Ruhe und Achtsamkeit" loading="lazy"></div>
-    <div class="hero-float a"><i data-lucide="sparkles"></i> Neue Leichtigkeit</div>
-  </div>
-</div>
-</section>
+  <!-- Floating feathers -->
+  <svg class="hero-feather-1" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M60 10 C60 10, 45 30, 48 55 C51 80, 58 95, 60 110 C62 95, 69 80, 72 55 C75 30, 60 10, 60 10Z" fill="currentColor" opacity=".15"/>
+    <path d="M60 10 L60 110" stroke="currentColor" stroke-width=".5" opacity=".2"/>
+    <path d="M48 40 Q54 38, 60 42" stroke="currentColor" stroke-width=".3" opacity=".15" fill="none"/>
+    <path d="M72 40 Q66 38, 60 42" stroke="currentColor" stroke-width=".3" opacity=".15" fill="none"/>
+    <path d="M48 55 Q54 52, 60 56" stroke="currentColor" stroke-width=".3" opacity=".12" fill="none"/>
+    <path d="M72 55 Q66 52, 60 56" stroke="currentColor" stroke-width=".3" opacity=".12" fill="none"/>
+    <path d="M50 70 Q55 67, 60 72" stroke="currentColor" stroke-width=".3" opacity=".1" fill="none"/>
+    <path d="M70 70 Q65 67, 60 72" stroke="currentColor" stroke-width=".3" opacity=".1" fill="none"/>
+  </svg>
+  <svg class="hero-feather-2" width="90" height="90" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(-25deg);">
+    <path d="M60 10 C60 10, 45 30, 48 55 C51 80, 58 95, 60 110 C62 95, 69 80, 72 55 C75 30, 60 10, 60 10Z" fill="currentColor" opacity=".12"/>
+    <path d="M60 10 L60 110" stroke="currentColor" stroke-width=".5" opacity=".15"/>
+  </svg>
 
-<!-- IMAGE BAND -->
-<div class="img-band">
-  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1400&q=80&fit=crop&crop=bottom" alt="Ruhiger Wald im Morgenlicht" loading="lazy" style="object-position:center 30%">
-  <div class="img-band-overlay" style="background:linear-gradient(180deg,var(--bg) 0%,rgba(45,42,38,.3) 25%,rgba(45,42,38,.35) 75%,rgba(253,251,247,1) 100%)"></div>
-  <div class="img-band-text"><h2>"Der erste Schritt zur Veränderung ist nicht der schwerste — es ist die Entscheidung, ihn zu gehen."</h2></div>
-</div>
-
-<!-- SYMPTOM CHECK -->
-<section class="check" id="selbsttest">
-<div class="container">
-  <div class="reveal" style="text-align:center"><div class="badge rose"><i data-lucide="clipboard-check"></i> Selbsttest</div><div class="stitle">Erkennst du dich wieder?</div><p class="ssub" style="margin:0 auto">Sei ehrlich zu dir. Tippe auf alles, was auf dich zutrifft.</p></div>
-  <div class="check-layout">
-    <div class="check-img reveal"><img src="https://images.unsplash.com/photo-1474418397713-7ede21d49118?w=600&q=80" alt="Frau blickt nachdenklich aus dem Fenster" loading="lazy"></div>
-    <div>
-      <div class="check-grid" id="symptomGrid">
-        <div class="check-card reveal" onclick="toggleCheck(this)"><div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span class="check-label">Ich fühle mich dauerhaft erschöpft — selbst nach Urlaub erholt sich nichts.</span></div>
-        <div class="check-card reveal" onclick="toggleCheck(this)"><div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span class="check-label">Kleinigkeiten werden zu riesigen Bergen. Ich weiß nicht wo ich anfangen soll.</span></div>
-        <div class="check-card reveal" onclick="toggleCheck(this)"><div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span class="check-label">Ich ziehe mich von Freunden und Familie zurück — alles ist zu viel.</span></div>
-        <div class="check-card reveal" onclick="toggleCheck(this)"><div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span class="check-label">Nach außen halte ich die Fassade aufrecht — aber innerlich bin ich leer.</span></div>
-        <div class="check-card reveal" onclick="toggleCheck(this)"><div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span class="check-label">Ich kann nicht NEIN sagen, obwohl ich am Limit bin.</span></div>
-        <div class="check-card reveal" onclick="toggleCheck(this)"><div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span class="check-label">Dinge die mir früher Freude gemacht haben, fühlen sich gleichgültig an.</span></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="dot"></span>
+        Online-Coaching — ortsunabhängig
       </div>
-      <div class="check-result" id="checkResult">
-        <div class="check-result-inner" id="resultLow"><h4>Achte auf dich.</h4><p>Auch wenn nicht alles zutrifft — Prävention ist der beste Schutz. <a href="#kontakt">Sprich mit mir</a>, bevor es mehr wird.</p></div>
-        <div class="check-result-inner" id="resultMid"><h4>Das klingt nach viel Last.</h4><p>Du trägst mehr als dir guttut. Das ist kein Zeichen von Schwäche. <a href="#kontakt">Lass uns reden.</a></p></div>
-        <div class="check-result-inner" id="resultHigh"><h4>Du musst das nicht alleine tragen.</h4><p>Vieles davon kenne ich aus eigener Erfahrung. Es gibt einen Weg raus. <a href="#kontakt">Lass mich dir zeigen wie.</a></p></div>
+      <h1 class="reveal">Raus aus der <em>Erschöpfung.</em><br>Zurück in dein Leben.</h1>
+      <p class="hero-sub reveal">Du funktionierst nur noch. Die Energie ist weg, die Freude auch. Ich kenne das — und ich zeige dir den Weg zurück. Ganzheitlich, persönlich, nachhaltig.</p>
+      <div class="hero-ctas reveal">
+        <a href="#kontakt" class="btn-primary">Kostenloses Erstgespräch <i data-lucide="arrow-right"></i></a>
+        <a href="#methode" class="btn-secondary">Mein Ansatz <i data-lucide="chevron-down"></i></a>
       </div>
-      <p class="check-hint">Dieser Test ersetzt keine ärztliche Diagnose.</p>
-    </div>
-  </div>
-</div>
-</section>
-
-<div class="f-div"><svg width="48" height="48" viewBox="0 0 40 80" fill="none"><path d="M20 2C20 2 8 18 8 36C8 48 13 58 20 62C27 58 32 48 32 36C32 18 20 2 20 2Z" stroke="#7A8B6F" stroke-width="1.5" fill="none"/><path d="M20 12V56" stroke="#7A8B6F" stroke-width=".75"/></svg></div>
-
-<!-- TRANSFORMATION -->
-<section>
-<div class="container">
-  <div class="reveal" style="text-align:center"><div class="badge"><i data-lucide="sun"></i> Stell dir vor</div><div class="stitle">Von Schwere zu Leichtigkeit.</div><p class="ssub" style="margin:0 auto">Das ist der Weg, den meine Klienten gehen. Und den du auch gehen kannst.</p></div>
-  <div class="transform-pairs">
-    <div class="transform-pair reveal"><div class="t-from">Erschöpfung & Antriebslosigkeit</div><div class="t-arrow"><i data-lucide="arrow-right"></i></div><div class="t-to">Energie & Lebensfreude</div></div>
-    <div class="transform-pair reveal"><div class="t-from">Hilflosigkeit & Überforderung</div><div class="t-arrow"><i data-lucide="arrow-right"></i></div><div class="t-to">Klarheit & Selbstwirksamkeit</div></div>
-    <div class="transform-pair reveal"><div class="t-from">Isolation & sozialer Rückzug</div><div class="t-arrow"><i data-lucide="arrow-right"></i></div><div class="t-to">Verbundenheit & Lebendigkeit</div></div>
-    <div class="transform-pair reveal"><div class="t-from">Negative Gedankenspirale</div><div class="t-arrow"><i data-lucide="arrow-right"></i></div><div class="t-to">Gesundes Mindset & innere Ruhe</div></div>
-  </div>
-</div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="ueber">
-<svg class="feather-svg feather-float" style="top:8%;right:5%;width:52px;animation-delay:3s" viewBox="0 0 40 80" fill="none"><path d="M20 2C20 2 8 18 8 36C8 48 13 58 20 62C27 58 32 48 32 36C32 18 20 2 20 2Z" stroke="#7A8B6F" stroke-width="1" fill="none"/><path d="M20 12V56" stroke="#7A8B6F" stroke-width=".5"/></svg>
-<div class="container">
-  <div class="about-layout">
-    <div class="about-img-wrap reveal">
-      <div class="about-img"><img src="https://onecdn.io/media/d858358a-f804-4907-a004-7a524e4dde9c/preview" alt="Dina Römgens" loading="lazy"></div>
-      <div class="about-accent"></div>
-    </div>
-    <div class="reveal">
-      <div class="badge warm"><i data-lucide="heart"></i> Meine Geschichte</div>
-      <div class="stitle">Ich war genau da,<br>wo du jetzt bist.</div>
-      <div class="about-text">
-        <p>Mit 33 war ich Mutter von zwei Kindern, führte ein Geschäft und liebte mein Leben — dachte ich. Doch irgendwann wurden Kleinigkeiten zu riesigen Belastungen. <strong>Nichts machte mehr Freude.</strong> Ich wollte nur noch Ruhe.</p>
-        <p>Nach außen hielt ich alles aufrecht: die perfekte Mama, Geschäftsfrau, Freundin. Aber innerlich wurde die Energie jeden Tag weniger. <span class="highlight"><strong>Eines Morgens ging gar nichts mehr.</strong></span> Selbst der Morgenkaffee wurde zur Hürde.</p>
-        <p>Die Erkrankung meiner Mutter wurde zum Wendepunkt. Nächtelang forschte ich nach Wegen — und begann meine Ausbildung zur Heilpraktikerin. Heute helfe ich Menschen, <strong>die sich austherapiert fühlen</strong> oder in schwierigen Lebenssituationen feststecken.</p>
-        <p>So schlimm muss es für dich nicht werden — wenn du dir <span class="highlight">rechtzeitig Unterstützung</span> holst.</p>
+      <div class="hero-trust reveal">
+        <span><i data-lucide="shield-check"></i> Kostenlos & unverbindlich</span>
+        <span><i data-lucide="video"></i> Bequem per Video-Call</span>
       </div>
-      <div class="about-sig">— Dina</div>
+    </div>
+    <div class="hero-image reveal">
+      <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=1000&fit=crop&crop=faces" alt="Frau in entspannter Meditationshaltung in der Natur" loading="eager">
     </div>
   </div>
-</div>
 </section>
 
-<!-- IMAGE BAND 2 -->
-<div class="img-band">
-  <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=1400&q=80" alt="Frau breitet Arme in der Natur aus" loading="lazy">
-  <div class="img-band-overlay" style="background:linear-gradient(180deg,rgba(240,232,218,1) 0%,rgba(0,0,0,.2) 25%,rgba(0,0,0,.2) 75%,var(--bg) 100%)"></div>
-  <div class="img-band-text"><h2>"Heilung beginnt in dem Moment, in dem du aufhörst, alles alleine tragen zu wollen."</h2></div>
+<!-- ═══ FEATHER DIVIDER ═══ -->
+<div class="feather-divider">
+  <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M60 10 C60 10, 45 30, 48 55 C51 80, 58 95, 60 110 C62 95, 69 80, 72 55 C75 30, 60 10, 60 10Z" fill="currentColor" opacity=".5"/>
+    <path d="M60 10 L60 110" stroke="currentColor" stroke-width=".8" opacity=".6"/>
+    <path d="M48 45 Q54 42, 60 47" stroke="currentColor" stroke-width=".4" fill="none" opacity=".4"/>
+    <path d="M72 45 Q66 42, 60 47" stroke="currentColor" stroke-width=".4" fill="none" opacity=".4"/>
+    <path d="M50 65 Q55 62, 60 66" stroke="currentColor" stroke-width=".4" fill="none" opacity=".3"/>
+    <path d="M70 65 Q65 62, 60 66" stroke="currentColor" stroke-width=".4" fill="none" opacity=".3"/>
+  </svg>
 </div>
 
-<!-- METHOD -->
-<section id="methode">
-<div class="container">
-  <div class="reveal" style="text-align:center"><div class="badge"><i data-lucide="route"></i> Meine Methode</div><div class="stitle">In 4 Schritten zurück<br>in dein Leben.</div><p class="ssub" style="margin:0 auto">Körper, Geist und Seele — weil echte Veränderung alle drei braucht.</p></div>
-  <div class="method-steps">
-    <div class="m-step reveal"><div class="m-num">01</div><div class="m-ico"><i data-lucide="search" style="width:22px;height:22px"></i></div><h4>Bedürfnisse erkennen</h4><p>Wer bin ich? Was will ich? Was will ich nicht? Zurück zu dir selbst finden.</p></div>
-    <div class="m-step reveal"><div class="m-num">02</div><div class="m-ico"><i data-lucide="zap" style="width:22px;height:22px"></i></div><h4>Energie aufbauen</h4><p>Ernährung, Mikronährstoffe und Bewegung — individuell auf dich abgestimmt.</p></div>
-    <div class="m-step reveal"><div class="m-num">03</div><div class="m-ico"><i data-lucide="brain" style="width:22px;height:22px"></i></div><h4>Mentale Stärke</h4><p>Blockierende Muster erkennen, Glaubenssätze umschreiben, gesunde Grenzen setzen.</p></div>
-    <div class="m-step reveal"><div class="m-num">04</div><div class="m-ico"><i data-lucide="shield" style="width:22px;height:22px"></i></div><h4>Resilienz aufbauen</h4><p>Selbstvertrauen gewinnen, Stress-Techniken verinnerlichen, Perspektiven aufbauen.</p></div>
+<!-- ═══ PAIN SECTION ═══ -->
+<section class="pain section">
+  <div class="container">
+    <div class="section-label reveal">Kennst du das?</div>
+    <h2 class="section-title reveal">Wenn Funktionieren zur <br>einzigen Option geworden ist</h2>
+    <p class="section-subtitle reveal">Du gibst alles — für den Job, die Familie, alle anderen. Aber für dich selbst bleibt nichts mehr übrig. Diese Symptome sind kein Versagen. Sie sind ein Signal.</p>
+
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="icon-wrap"><i data-lucide="battery-low"></i></div>
+        <h3>Dauerhaft erschöpft</h3>
+        <p>Selbst nach dem Wochenende fühlst du dich nicht erholt. Der Akku lädt einfach nicht mehr auf.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="icon-wrap"><i data-lucide="moon"></i></div>
+        <h3>Schlaflos & ruhelos</h3>
+        <p>Die Gedanken kreisen. Ein- und Durchschlafen wird zum Kampf. Morgens bist du müder als abends.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="icon-wrap"><i data-lucide="heart-crack"></i></div>
+        <h3>Freude verschwunden</h3>
+        <p>Dinge, die dir früher Spaß gemacht haben, fühlen sich leer an. Alles ist nur noch Pflicht.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="icon-wrap"><i data-lucide="brain"></i></div>
+        <h3>Konzentration weg</h3>
+        <p>Vergesslichkeit, Gedankennebel, Entscheidungen fallen schwer. Dein Kopf fühlt sich an wie Watte.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="icon-wrap"><i data-lucide="shield-off"></i></div>
+        <h3>Ständig krank</h3>
+        <p>Infekte, Kopfschmerzen, Verspannungen. Dein Körper zeigt dir, dass die Grenze erreicht ist.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="icon-wrap"><i data-lucide="user-x"></i></div>
+        <h3>Innerlich leer</h3>
+        <p>Du spürst dich nicht mehr. Emotionale Taubheit. Eine Fassade für alle anderen — aber innen: nichts.</p>
+      </div>
+    </div>
   </div>
-</div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testi" id="stimmen">
-<div class="container">
-  <div class="reveal" style="text-align:center"><div class="badge warm"><i data-lucide="quote"></i> Kundenstimmen</div><div class="stitle">Menschen, die ihren Weg<br>zurück gefunden haben.</div></div>
-  <div class="testi-grid">
-    <div class="testi-card reveal"><div class="testi-quote">"</div><div class="testi-transform"><i data-lucide="arrow-right" style="width:12px;height:12px"></i> Medikamentenfrei</div><div class="testi-text">"Durch Dina bin ich heute medikamentenfrei. Ich habe Werkzeuge bekommen, um für Balance zu sorgen. Ich lächle viel, genieße das Leben wieder und bin in meiner Kraft!"</div><div class="testi-author"><div class="testi-avatar"><img src="https://onecdn.io/media/dc1766e6-390b-4242-bc83-5e77e6293994/preview" alt="Karolina"></div><div><div class="testi-name">Karolina H.</div><div class="testi-role">Chronische Darmentzündung</div></div></div></div>
-    <div class="testi-card reveal"><div class="testi-quote">"</div><div class="testi-transform"><i data-lucide="arrow-right" style="width:12px;height:12px"></i> Neue Energie</div><div class="testi-text">"Ich stand kurz vor einem Burnout. Dina hat mir Zeit und Verständnis geschenkt. Durch sie habe ich wieder Energie und ein gesundes Mindset. Großartig!"</div><div class="testi-author"><div class="testi-avatar"><img src="https://onecdn.io/media/46dff7b2-4781-4a25-8ab2-47dfa3b75e51/preview" alt="Susanne"></div><div><div class="testi-name">Susanne</div><div class="testi-role">Burnout-Prävention</div></div></div></div>
-    <div class="testi-card reveal"><div class="testi-quote">"</div><div class="testi-transform"><i data-lucide="arrow-right" style="width:12px;height:12px"></i> Innere Stärke</div><div class="testi-text">"Seit über vier Jahren arbeite ich mit Dina. Sie hat mir geholfen, wieder an mich zu glauben und meine innere Stärke zu entfalten. Ohne sie wäre ich nicht da, wo ich heute bin."</div><div class="testi-author"><div class="testi-avatar"><img src="https://onecdn.io/media/fa0d43c4-878e-45ad-8125-10b9eda64d10/preview" alt="Elisa"></div><div><div class="testi-name">Elisa K.</div><div class="testi-role">Depression & Selbstfindung</div></div></div></div>
+<!-- ═══ TRANSFORMATION ═══ -->
+<section class="transformation section">
+  <div class="container">
+    <div class="section-label reveal">Dein Weg</div>
+    <h2 class="section-title reveal">Von der Schwere <br>in die Leichtigkeit</h2>
+    <p class="section-subtitle reveal">Das ist keine Wunschvorstellung. Das sind echte Veränderungen, die meine Klientinnen erleben.</p>
+
+    <div class="transform-pairs">
+      <div class="transform-pair reveal">
+        <div class="transform-from">Dauererschöpfung</div>
+        <div class="transform-arrow"><i data-lucide="arrow-right"></i></div>
+        <div class="transform-to">Nachhaltige Energie</div>
+      </div>
+      <div class="transform-pair reveal">
+        <div class="transform-from">Nur noch funktionieren</div>
+        <div class="transform-arrow"><i data-lucide="arrow-right"></i></div>
+        <div class="transform-to">Bewusst leben</div>
+      </div>
+      <div class="transform-pair reveal">
+        <div class="transform-from">Gedankenkarussell</div>
+        <div class="transform-arrow"><i data-lucide="arrow-right"></i></div>
+        <div class="transform-to">Innere Ruhe</div>
+      </div>
+      <div class="transform-pair reveal">
+        <div class="transform-from">Freudlosigkeit</div>
+        <div class="transform-arrow"><i data-lucide="arrow-right"></i></div>
+        <div class="transform-to">Lebensfreude</div>
+      </div>
+    </div>
   </div>
-</div>
 </section>
 
-<!-- CTA + FORM -->
-<section class="cta-section" id="kontakt">
-<svg class="feather-svg feather-float" style="bottom:12%;left:4%;width:56px;animation-delay:1s" viewBox="0 0 40 80" fill="none"><path d="M20 2C20 2 8 18 8 36C8 48 13 58 20 62C27 58 32 48 32 36C32 18 20 2 20 2Z" stroke="#7A8B6F" stroke-width="1" fill="none"/><path d="M20 12V56" stroke="#7A8B6F" stroke-width=".5"/></svg>
-<div class="container">
-  <div class="reveal"><div class="badge"><i data-lucide="message-circle"></i> Dein erster Schritt</div><div class="stitle">Lass uns reden.<br>Unverbindlich und kostenlos.</div><p class="ssub">Du musst nicht alleine da durch. Lass uns gemeinsam schauen, wo du stehst — und wie es leichter werden kann.</p></div>
-  <div class="cta-flow reveal">
-    <div class="cta-flow-step"><div class="cta-flow-num">1</div><div class="cta-flow-label">Kennenlernen · 15 Min.</div></div>
-    <div class="cta-flow-arrow"><i data-lucide="chevron-right" style="width:18px;height:18px"></i></div>
-    <div class="cta-flow-step"><div class="cta-flow-num">2</div><div class="cta-flow-label">Beratung · 45 Min.</div></div>
-    <div class="cta-flow-arrow"><i data-lucide="chevron-right" style="width:18px;height:18px"></i></div>
-    <div class="cta-flow-step"><div class="cta-flow-num">3</div><div class="cta-flow-label">Zusammenarbeit</div></div>
-  </div>
-  <div class="contact-form reveal">
-    <form action="#" method="POST">
-      <div class="form-grid"><div class="form-row"><label>Vorname</label><input type="text" name="firstName" required placeholder="Dein Vorname"></div><div class="form-row"><label>Nachname</label><input type="text" name="lastName" required placeholder="Dein Nachname"></div></div>
-      <div class="form-row"><label>E-Mail</label><input type="email" name="email" required placeholder="deine@email.de"></div>
-      <div class="form-row"><label>Was belastet dich gerade? (optional)</label><textarea name="message" placeholder="Ein paar Stichworte reichen — alles Weitere besprechen wir persönlich."></textarea></div>
-      <button type="submit" class="form-submit"><i data-lucide="feather" style="width:18px;height:18px"></i> Erstgespräch anfragen</button>
-    </form>
-    <div class="form-promise"><span><i data-lucide="check-circle"></i> 100% kostenlos</span><span><i data-lucide="check-circle"></i> Vertraulich</span><span><i data-lucide="check-circle"></i> Kein Druck</span></div>
+<!-- ═══ VISUAL BREAK 1 ═══ -->
+<div class="visual-break">
+  <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1400&h=500&fit=crop" alt="Neblige Berglandschaft im Morgengrauen" loading="lazy">
+  <div class="overlay">
+    <p class="reveal">„Du musst nicht alles alleine tragen. Manchmal ist der mutigste Schritt, dir Hilfe zu holen."</p>
   </div>
 </div>
+
+<!-- ═══ STORY ═══ -->
+<section class="story section" id="ueber">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-image reveal">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&h=900&fit=crop&crop=faces" alt="Dina Römgens — Burnout-Coach und Heilpraktikerin" loading="lazy">
+      </div>
+      <div class="story-content">
+        <div class="section-label reveal">Meine Geschichte</div>
+        <h2 class="section-title reveal">Ich weiß, wie sich der Boden unter den Füßen anfühlt, wenn er wegbricht.</h2>
+        <blockquote class="reveal">„Mit 33 hatte ich alles. Familie, Geschäft, das volle Programm. Und plötzlich — ging nichts mehr."</blockquote>
+        <p class="reveal">Von außen sah alles perfekt aus. Aber innerlich zerbrach ich. Ich funktionierte nur noch, hielt die Fassade aufrecht, bis eines Morgens nicht mal mehr das ging. Ein Burnout mit voller Wucht.</p>
+        <p class="reveal">Als dann meine Mutter schwer erkrankte, wurde alles anders. Dieser Wendepunkt hat mich zur Heilpraktikerin gemacht — weil ich verstanden habe, dass Gesundheit Körper, Geist und Seele betrifft. Nicht nur Symptome, sondern die Wurzel.</p>
+        <p class="reveal">Heute helfe ich Frauen, die genau da stehen, wo ich stand. Nicht mit Theorie aus Büchern — sondern mit echtem Wissen aus eigener Erfahrung und fundierter Ausbildung.</p>
+        <div class="story-name reveal">Dina Römgens</div>
+        <div class="story-role reveal">Burnout-Coach & Heilpraktikerin</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══ FEATHER DIVIDER ═══ -->
+<div class="feather-divider">
+  <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M60 10 C60 10, 45 30, 48 55 C51 80, 58 95, 60 110 C62 95, 69 80, 72 55 C75 30, 60 10, 60 10Z" fill="currentColor" opacity=".5"/>
+    <path d="M60 10 L60 110" stroke="currentColor" stroke-width=".8" opacity=".6"/>
+    <path d="M48 45 Q54 42, 60 47" stroke="currentColor" stroke-width=".4" fill="none" opacity=".4"/>
+    <path d="M72 45 Q66 42, 60 47" stroke="currentColor" stroke-width=".4" fill="none" opacity=".4"/>
+  </svg>
+</div>
+
+<!-- ═══ METHOD / 4 SCHRITTE ═══ -->
+<section class="method section" id="methode">
+  <div class="container">
+    <div style="text-align: center;">
+      <div class="section-label reveal">Mein Ansatz</div>
+      <h2 class="section-title reveal" style="margin: 0 auto 12px;">Vier Schritte zurück <br>in deine Kraft</h2>
+      <p class="section-subtitle reveal" style="margin: 0 auto;">Kein Schema F. Jeder Weg ist individuell. Aber diese vier Säulen tragen die Veränderung.</p>
+    </div>
+
+    <div class="method-steps">
+      <div class="method-step reveal">
+        <div class="step-num">1</div>
+        <div class="icon-wrap"><i data-lucide="search"></i></div>
+        <h3>Erkennen</h3>
+        <p>Wir schauen gemeinsam hin: Was hat dich hierher gebracht? Welche Bedürfnisse sind zu kurz gekommen?</p>
+      </div>
+      <div class="method-step reveal">
+        <div class="step-num">2</div>
+        <div class="icon-wrap"><i data-lucide="zap"></i></div>
+        <h3>Energie aufbauen</h3>
+        <p>Mikronährstoffe, Ernährung, Bewegung — dein Körper bekommt zurück, was ihm fehlt. Fundiert und individuell.</p>
+      </div>
+      <div class="method-step reveal">
+        <div class="step-num">3</div>
+        <div class="icon-wrap"><i data-lucide="brain"></i></div>
+        <h3>Mindset stärken</h3>
+        <p>Alte Muster durchbrechen. Grenzen setzen lernen. Ein neues Denken, das dich trägt statt ausbrennt.</p>
+      </div>
+      <div class="method-step reveal">
+        <div class="step-num">4</div>
+        <div class="icon-wrap"><i data-lucide="shield"></i></div>
+        <h3>Resilienz aufbauen</h3>
+        <p>Damit es nicht wieder passiert. Werkzeuge für deinen Alltag, die langfristig wirken und sich leicht anfühlen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="services section" id="leistungen">
+  <div class="container">
+    <div class="section-label reveal">Leistungen</div>
+    <h2 class="section-title reveal">Drei Wege, die sich ergänzen</h2>
+    <p class="section-subtitle reveal">Ganzheitlich heißt: Körper, Geist und Seele zusammen denken. Nicht entweder-oder, sondern alles im Blick.</p>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="icon-wrap"><i data-lucide="heart-pulse"></i></div>
+        <h3>Burnout-Coaching</h3>
+        <p>1:1 Sessions per Video-Call. Wir arbeiten an den Ursachen, nicht nur an den Symptomen. Individuell, vertraulich, in deinem Tempo.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="icon-wrap"><i data-lucide="leaf"></i></div>
+        <h3>Mikronährstoff-beratung</h3>
+        <p>Dein Körper braucht den richtigen Treibstoff. Auf Basis von Laborwerten und Symptomen erstellen wir deinen persönlichen Plan.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="icon-wrap"><i data-lucide="sun"></i></div>
+        <h3>Mindset-Coaching</h3>
+        <p>Die Stimme im Kopf, die sagt „du musst noch mehr" — wir geben ihr eine neue Richtung. Für ein Denken, das dich stärkt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VISUAL BREAK 2 ═══ -->
+<div class="visual-break">
+  <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=1400&h=500&fit=crop" alt="Ruhiger See bei Sonnenuntergang" loading="lazy">
+  <div class="overlay">
+    <p class="reveal">„Leichtigkeit ist kein Zufall. Sie ist eine Entscheidung — und eine, die du verdient hast."</p>
+  </div>
+</div>
+
+<!-- ═══ SYMPTOM CHECK ═══ -->
+<section class="symptom-check section">
+  <div class="container">
+    <div style="text-align: center;">
+      <div class="section-label reveal">Selbsttest</div>
+      <h2 class="section-title reveal">Wie stark betrifft dich das?</h2>
+      <p class="section-subtitle reveal" style="margin: 0 auto;">Klicke an, was auf dich zutrifft. Kein Diagnose-Tool — aber ein ehrlicher erster Blick.</p>
+    </div>
+
+    <div class="symptom-check-box reveal">
+      <div class="symptom-list" id="symptomList">
+        <div class="symptom-item" data-symptom="1">
+          <div class="check"><i data-lucide="check"></i></div>
+          <span>Ich bin ständig erschöpft, egal wie viel ich schlafe</span>
+        </div>
+        <div class="symptom-item" data-symptom="2">
+          <div class="check"><i data-lucide="check"></i></div>
+          <span>Ich kann mich schlecht konzentrieren</span>
+        </div>
+        <div class="symptom-item" data-symptom="3">
+          <div class="check"><i data-lucide="check"></i></div>
+          <span>Ich fühle mich innerlich leer oder taub</span>
+        </div>
+        <div class="symptom-item" data-symptom="4">
+          <div class="check"><i data-lucide="check"></i></div>
+          <span>Ich bin häufiger gereizt als früher</span>
+        </div>
+        <div class="symptom-item" data-symptom="5">
+          <div class="check"><i data-lucide="check"></i></div>
+          <span>Ich habe Angst, dass es so nicht weitergehen kann</span>
+        </div>
+        <div class="symptom-item" data-symptom="6">
+          <div class="check"><i data-lucide="check"></i></div>
+          <span>Ich vernachlässige Dinge, die mir wichtig sind</span>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="symptom-result level-1" id="result1">
+        <h4>Erste Anzeichen erkennbar</h4>
+        <p>Du spürst, dass etwas nicht stimmt — und das ist ein gutes Zeichen. Jetzt ist der richtige Zeitpunkt, gegenzusteuern, bevor es mehr wird.</p>
+        <a href="#kontakt" class="symptom-btn">Lass uns reden <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="symptom-result level-2" id="result2">
+        <h4>Deutliche Belastung</h4>
+        <p>Mehrere Warnsignale sprechen eine klare Sprache. Dein Körper und deine Seele bitten dich um eine Veränderung. Nimm das ernst.</p>
+        <a href="#kontakt" class="symptom-btn">Erstgespräch anfragen <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="symptom-result level-3" id="result3">
+        <h4>Dringendes Handeln empfohlen</h4>
+        <p>Vieles spricht dafür, dass du an einem kritischen Punkt bist. Das ist kein Grund zur Panik — aber ein Grund, dir jetzt Unterstützung zu holen.</p>
+        <a href="#kontakt" class="symptom-btn">Jetzt Kontakt aufnehmen <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="testimonials section" id="stimmen">
+  <div class="container">
+    <div style="text-align: center;">
+      <div class="section-label reveal">Kundenstimmen</div>
+      <h2 class="section-title reveal">Was andere über den Weg sagen</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <div>
+          <span class="transform-label from">Darmentzündung</span>
+          <span class="transform-label arrow">→</span>
+          <span class="transform-label to">Medikamentenfrei</span>
+        </div>
+        <blockquote>„Durch Dina bin ich heute medikamentenfrei. Sie hat dort hingeschaut, wo andere aufgehört haben."</blockquote>
+        <div class="author">
+          <div class="avatar">KH</div>
+          <div class="author-info">
+            <div class="name">Karolina H.</div>
+            <div class="detail">Klientin seit 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <div>
+          <span class="transform-label from">Burnout</span>
+          <span class="transform-label arrow">→</span>
+          <span class="transform-label to">Energie & Mindset</span>
+        </div>
+        <blockquote>„Durch sie habe ich wieder Energie und ein gesundes Mindset. Ich hätte nie gedacht, dass es so schnell gehen kann."</blockquote>
+        <div class="author">
+          <div class="avatar">S</div>
+          <div class="author-info">
+            <div class="name">Susanne</div>
+            <div class="detail">Klientin seit 2023</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <div>
+          <span class="transform-label from">Depression</span>
+          <span class="transform-label arrow">→</span>
+          <span class="transform-label to">Selbstliebe</span>
+        </div>
+        <blockquote>„Ohne sie wäre ich nicht da, wo ich heute bin. Dina sieht dich als ganzen Menschen, nicht nur als Problem."</blockquote>
+        <div class="author">
+          <div class="avatar">EK</div>
+          <div class="author-info">
+            <div class="name">Elisa K.</div>
+            <div class="detail">Klientin seit 2023</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FIRST SESSION ═══ -->
+<section class="first-session section">
+  <div class="container">
+    <div style="text-align: center;">
+      <div class="section-label reveal">Dein erster Termin</div>
+      <h2 class="section-title reveal">Was dich erwartet</h2>
+      <p class="section-subtitle reveal" style="margin: 0 auto;">Kein Druck. Kein Vertrag. Nur ein ehrliches Gespräch darüber, wo du stehst und wo du hin willst.</p>
+    </div>
+
+    <div class="session-steps">
+      <div class="session-step reveal">
+        <div class="step-icon"><i data-lucide="video"></i></div>
+        <h3>Kennenlernen</h3>
+        <div class="duration">15 Minuten</div>
+        <p>Wir sprechen kurz per Video-Call. Du erzählst, ich höre zu. Keine Verpflichtung, kein Verkaufsgespräch.</p>
+      </div>
+      <div class="session-step reveal">
+        <div class="step-icon"><i data-lucide="clipboard-check"></i></div>
+        <h3>Bestandsaufnahme</h3>
+        <div class="duration">45 Minuten</div>
+        <p>Wenn es passt, schauen wir gemeinsam tiefer hin. Was belastet dich? Was brauchst du? Was ist möglich?</p>
+      </div>
+      <div class="session-step reveal">
+        <div class="step-icon"><i data-lucide="handshake"></i></div>
+        <h3>Zusammenarbeit</h3>
+        <div class="duration">Langfristig</div>
+        <p>Wir entscheiden gemeinsam, ob und wie wir zusammenarbeiten. Dein Tempo, deine Entscheidung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="contact section" id="kontakt">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-text">
+        <div class="section-label reveal">Kontakt</div>
+        <h2 class="reveal">Der erste Schritt fühlt sich immer <em>federleicht</em> an.</h2>
+        <p class="reveal">Schreib mir eine Nachricht oder frag direkt ein kostenloses Erstgespräch an. Ich melde mich innerhalb von 24 Stunden bei dir.</p>
+        <div class="contact-trust reveal">
+          <span><i data-lucide="shield-check"></i> Kostenlos & unverbindlich</span>
+          <span><i data-lucide="lock"></i> Vertraulich & diskret</span>
+          <span><i data-lucide="clock"></i> Antwort innerhalb von 24 Stunden</span>
+          <span><i data-lucide="heart"></i> Kein Druck, kein Verkauf</span>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Dein Name</label>
+            <input type="text" id="name" name="name" placeholder="Wie heißt du?" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+          </div>
+          <div class="form-group">
+            <label for="thema">Was beschäftigt dich?</label>
+            <select id="thema" name="thema">
+              <option value="">Bitte wählen...</option>
+              <option value="burnout">Burnout / Erschöpfung</option>
+              <option value="ernaehrung">Mikronährstoffe / Ernährung</option>
+              <option value="mindset">Mindset / Mentale Stärke</option>
+              <option value="sonstiges">Etwas anderes</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Deine Nachricht (optional)</label>
+            <textarea id="message" name="message" placeholder="Erzähl mir kurz, was dich zu mir führt..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Erstgespräch anfragen</button>
+          <p class="form-note">Deine Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
 <footer>
-<div class="container">
-  <div class="footer-brand"><div class="logo" style="margin-bottom:8px"><div class="logo-mark"><svg viewBox="0 0 32 32" fill="none" style="width:24px;height:24px;color:var(--cream)"><path d="M16 2C16 2 8 10 8 18C8 22.4 11.6 26 16 26C20.4 26 24 22.4 24 18C24 10 16 2 16 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M16 26V30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M16 10V22" stroke="currentColor" stroke-width="1" opacity=".3"/></svg></div><div><span class="logo-text">Federleicht</span><span class="logo-sub">Dina Römgens · Heilpraktikerin</span></div></div><div class="footer-tagline">Raus aus dem Burnout.<br>Zurück in dein Leben.</div></div>
-  <div class="footer-links"><a href="#methode">Methode</a><a href="#ueber">Über mich</a><a href="#stimmen">Kundenstimmen</a><a href="#kontakt">Kontakt</a><a href="/impressum.html">Impressum</a><a href="/datenschutz.html">Datenschutz</a></div>
-</div>
-<div class="container"><div class="footer-bottom">© 2026 Federleicht — Dina Römgens. Alle Rechte vorbehalten.</div><div class="footer-note">Coaching und Beratung ersetzen keine ärztliche oder therapeutische Behandlung. Bei akuten psychischen Krisen wende dich an die Telefonseelsorge: 0800 111 0 111 (kostenlos, 24/7).</div></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">feder<span>leicht</span></div>
+        <p>Ganzheitliches Burnout-Coaching für Frauen, die bereit sind, ihr Leben zurückzuerobern. Online, persönlich, nachhaltig.</p>
+        <div class="footer-crisis">
+          <strong>Du brauchst sofort Hilfe?</strong><br>
+          Telefonseelsorge: <strong>0800 111 0 111</strong> (kostenlos, 24/7, anonym)<br>
+          Krisentelefon: <strong>0800 111 0 222</strong>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="#methode">Methode</a>
+        <a href="#ueber">Über mich</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#stimmen">Kundenstimmen</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <a href="mailto:info@federleicht.de">info@federleicht.de</a>
+        <a href="#kontakt">Erstgespräch anfragen</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Federleicht — Dina Römgens. Alle Rechte vorbehalten.</span>
+      <div>
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+    <p style="text-align: center; font-size: .72rem; margin-top: 16px; opacity: .4;">Die Inhalte dieser Website ersetzen keine ärztliche oder psychotherapeutische Behandlung.</p>
+  </div>
 </footer>
 
+<!-- ═══ JAVASCRIPT ═══ -->
 <script>
-function toggleCheck(card){card.classList.toggle('active');updateResult()}
-function updateResult(){const c=document.querySelectorAll('.check-card.active').length;document.getElementById('resultLow').classList.remove('show');document.getElementById('resultMid').classList.remove('show');document.getElementById('resultHigh').classList.remove('show');if(c>=1&&c<=2)document.getElementById('resultLow').classList.add('show');else if(c>=3&&c<=4)document.getElementById('resultMid').classList.add('show');else if(c>=5)document.getElementById('resultHigh').classList.add('show')}
-document.addEventListener('DOMContentLoaded',function(){lucide.createIcons();const obs=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})})});
+// Initialize Lucide Icons
+lucide.createIcons();
+
+// ── NAV SCROLL ──
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ── SCROLL REVEAL ──
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── SMOOTH SCROLL ──
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const offset = 80;
+      const y = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  });
+});
+
+// ── SYMPTOM CHECK ──
+const symptomItems = document.querySelectorAll('.symptom-item');
+const results = {
+  1: document.getElementById('result1'),
+  2: document.getElementById('result2'),
+  3: document.getElementById('result3')
+};
+
+symptomItems.forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('active');
+    // Re-create icons for toggled items
+    lucide.createIcons();
+    updateSymptomResult();
+  });
+});
+
+function updateSymptomResult() {
+  const count = document.querySelectorAll('.symptom-item.active').length;
+
+  // Hide all results
+  Object.values(results).forEach(r => r.classList.remove('show'));
+
+  if (count >= 1 && count <= 2) {
+    results[1].classList.add('show');
+  } else if (count >= 3 && count <= 4) {
+    results[2].classList.add('show');
+  } else if (count >= 5) {
+    results[3].classList.add('show');
+  }
+
+  // Re-init icons in results
+  lucide.createIcons();
+}
 </script>
+
 </body>
 </html>
