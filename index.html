@@ -1155,13 +1155,233 @@ footer a:hover { color: var(--sage-light); }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
 }
 
-/* ═══ MOBILE EXTRAS ═══ */
+/* ═══ TABLET (900px) — CONSOLIDATED ═══ */
+@media (max-width: 900px) {
+  .container { padding: 0 20px; }
+  .section { padding: 70px 0; }
+  .section-title { font-size: 2rem; }
+
+  /* Nav */
+  .nav-links a:not(.nav-cta) { display: none; }
+  nav { padding: 14px 20px; }
+  nav.scrolled { padding: 10px 20px; }
+
+  .hero { min-height: auto; padding: 100px 0 60px; }
+  .hero .container { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+  .hero-content { order: 1; }
+  .hero-image { order: 2; }
+  .hero h1 { font-size: 2.4rem; }
+  .hero-sub { margin: 0 auto 28px; }
+  .hero-ctas { justify-content: center; }
+  .hero-trust { justify-content: center; flex-wrap: wrap; gap: 16px; }
+  .hero-image img { height: 360px; border-radius: 20px; }
+  .hero-image::after { display: none; }
+  .hero-feather-1, .hero-feather-2 { display: none; }
+
+  .pain-grid { grid-template-columns: 1fr 1fr; }
+  .transform-pairs { grid-template-columns: 1fr; }
+  .story-grid { grid-template-columns: 1fr; gap: 36px; }
+  .story-image img { height: 340px; }
+  .method-steps { grid-template-columns: 1fr 1fr; }
+  .method-step::after { display: none; }
+  .services-grid { grid-template-columns: 1fr; }
+  .symptom-list { grid-template-columns: 1fr; }
+  .symptom-check-box { padding: 28px 20px; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .session-steps { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+  .contact-text { text-align: center; }
+  .contact-trust { align-items: center; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+  .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+  .footer-bottom a { margin-left: 0; margin: 0 8px; }
+}
+
+/* ═══ MOBILE (500px) — FULL UX POLISH ═══ */
 @media (max-width: 500px) {
-  .section { padding: 60px 0; }
-  .section-title { font-size: 1.8rem; }
-  .hero h1 { font-size: 1.9rem; }
-  .hero { padding-top: 60px; }
-  .visual-break { height: 220px; }
+  body { font-size: 15px; }
+  .container { padding: 0 16px; }
+  .section { padding: 52px 0; }
+  .section-label { font-size: .68rem; margin-bottom: 8px; }
+  .section-title { font-size: 1.6rem; margin-bottom: 14px; }
+  .section-subtitle { font-size: .95rem; }
+
+  /* Nav — compact, thumb-friendly */
+  nav { padding: 12px 16px !important; }
+  nav.scrolled { padding: 10px 16px !important; }
+  .nav-brand { font-size: 1.15rem; }
+  .nav-cta { padding: 8px 16px !important; font-size: .72rem !important; }
+
+  /* Hero — stacked, breathable */
+  .hero { padding: 80px 0 48px; min-height: auto; }
+  .hero .container { gap: 28px; }
+  .hero-badge { font-size: .68rem; padding: 5px 12px; margin-bottom: 16px; }
+  .hero h1 { font-size: 1.85rem; line-height: 1.2; }
+  .hero-sub { font-size: .95rem; line-height: 1.7; margin-bottom: 24px; }
+  .hero-ctas { flex-direction: column; gap: 10px; }
+  .btn-primary, .btn-secondary {
+    width: 100%; justify-content: center;
+    padding: 14px 24px; font-size: .88rem;
+  }
+  .hero-trust { flex-direction: column; gap: 8px; align-items: center; }
+  .hero-trust span { font-size: .75rem; }
+  .hero-image img { height: 280px; border-radius: 16px; }
+
+  /* Pain — horizontal card layout */
+  .pain-grid { grid-template-columns: 1fr; gap: 12px; }
+  .pain-card {
+    padding: 20px 18px; border-radius: 14px;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .pain-card .icon-wrap {
+    width: 42px; height: 42px; min-width: 42px;
+    border-radius: 10px; margin-bottom: 0;
+  }
+  .pain-card .icon-wrap i { width: 20px; height: 20px; }
+  .pain-card h3 { font-size: 1rem; margin-bottom: 4px; }
+  .pain-card p { font-size: .84rem; line-height: 1.6; }
+
+  /* Transform pairs — compact pills */
+  .transform-pairs { gap: 10px; }
+  .transform-pair {
+    flex-direction: row; padding: 16px;
+    gap: 10px; border-radius: 14px;
+  }
+  .transform-from, .transform-to {
+    font-size: .75rem; padding: 8px 12px; border-radius: 10px;
+    min-width: 0; flex: 1; white-space: normal; text-align: center;
+  }
+  .transform-arrow i { width: 16px; height: 16px; }
+
+  /* Visual breaks */
+  .visual-break { height: 200px; }
+  .visual-break .overlay { padding: 24px 20px; }
+  .visual-break .overlay p { font-size: 1.15rem; line-height: 1.45; }
+
+  /* Story */
+  .story-grid { gap: 28px; }
+  .story-image img { height: 260px; border-radius: 16px; }
+  .story-content blockquote { font-size: 1.1rem; padding-left: 16px; margin-bottom: 18px; }
+  .story-content p { font-size: .88rem; margin-bottom: 12px; }
+
+  /* Method — 1-col with inline number */
+  .method-steps { grid-template-columns: 1fr; gap: 14px; }
+  .method-step {
+    padding: 24px 20px; border-radius: 16px; text-align: left;
+    display: grid; grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto; gap: 0 14px; align-items: center;
+  }
+  .method-step .step-num {
+    grid-row: 1 / 3; grid-column: 1;
+    width: 40px; height: 40px; font-size: 1rem; margin: 0;
+  }
+  .method-step .icon-wrap { display: none; }
+  .method-step h3 { grid-column: 2; font-size: 1rem; margin-bottom: 2px; }
+  .method-step p { grid-column: 1 / -1; font-size: .84rem; margin-top: 10px; }
+
+  /* Services — horizontal layout */
+  .services-grid { gap: 14px; }
+  .service-card {
+    padding: 24px 20px; border-radius: 16px;
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  .service-card .icon-wrap {
+    width: 48px; height: 48px; min-width: 48px;
+    border-radius: 14px; margin-bottom: 0;
+  }
+  .service-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .service-card p { font-size: .84rem; line-height: 1.65; }
+
+  /* Symptom check — big tap targets */
+  .symptom-check-box { padding: 20px 16px; border-radius: 18px; }
+  .symptom-list { gap: 8px; }
+  .symptom-item {
+    padding: 14px; border-radius: 10px; gap: 10px; min-height: 48px;
+  }
+  .symptom-item .check { width: 24px; height: 24px; min-width: 24px; border-radius: 7px; }
+  .symptom-item span { font-size: .84rem; line-height: 1.4; }
+  .symptom-result { padding: 20px 16px; border-radius: 14px; }
+  .symptom-result h4 { font-size: 1.05rem; }
+  .symptom-result p { font-size: .84rem; }
+  .symptom-btn { width: 100%; justify-content: center; padding: 13px 20px; }
+
+  /* Testimonials */
+  .testimonials-grid { gap: 14px; }
+  .testimonial-card { padding: 24px 20px; border-radius: 16px; }
+  .testimonial-card .stars { font-size: .82rem; margin-bottom: 10px; }
+  .testimonial-card .transform-label { font-size: .68rem; padding: 3px 10px; }
+  .testimonial-card blockquote { font-size: .95rem; margin-bottom: 16px; }
+
+  /* Session steps — horizontal */
+  .session-steps { gap: 12px; }
+  .session-step {
+    padding: 22px 18px; border-radius: 16px; text-align: left;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .session-step .step-icon { width: 48px; height: 48px; min-width: 48px; border-radius: 14px; margin: 0; }
+  .session-step h3 { font-size: 1rem; margin-bottom: 2px; }
+  .session-step .duration { margin-bottom: 4px; font-size: .7rem; }
+  .session-step p { font-size: .84rem; }
+
+  /* Contact */
+  .contact-text h2 { font-size: 1.6rem; }
+  .contact-text p { font-size: .9rem; }
+  .contact-trust { gap: 8px; align-items: flex-start; }
+  .contact-trust span { font-size: .82rem; }
+  .contact-form { padding: 24px 18px; border-radius: 18px; }
+  .form-group label { font-size: .78rem; }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 12px 14px; border-radius: 10px;
+    font-size: 16px; /* prevent iOS zoom on focus */
+  }
+  .form-submit { padding: 15px; font-size: .9rem; border-radius: 14px; }
+
+  /* Footer */
+  footer { padding: 44px 0 24px; }
+  .footer-brand { font-size: 1.15rem; }
+  footer p { font-size: .82rem; }
+  footer h4 { font-size: .75rem; margin-bottom: 12px; }
+  footer a { font-size: .82rem; margin-bottom: 6px; }
+  .footer-crisis { font-size: .78rem; padding: 14px 16px; }
+  .footer-bottom { font-size: .72rem; }
+
+  /* Feather dividers */
+  .feather-divider { padding: 20px 0; }
+  .feather-divider svg { width: 36px; height: 36px; }
+  .feather-divider::before, .feather-divider::after { width: 50px; }
+}
+
+/* ═══ STICKY MOBILE CTA ═══ */
+.mobile-sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 99;
+  padding: 12px 16px;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  background: rgba(253,251,247,.95);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(122,139,111,.1);
+  box-shadow: 0 -4px 20px rgba(0,0,0,.06);
+  transform: translateY(100%);
+  transition: transform .4s cubic-bezier(.16,1,.3,1);
+}
+.mobile-sticky-cta.show { transform: translateY(0); }
+.mobile-sticky-cta a {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; padding: 14px;
+  background: var(--sage); color: var(--white);
+  border-radius: 14px; font-size: .9rem; font-weight: 700;
+  font-family: var(--sans); letter-spacing: .02em;
+}
+@media (max-width: 900px) {
+  .mobile-sticky-cta { display: block; }
+  footer { padding-bottom: 80px; }
+}
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .mobile-sticky-cta { padding-bottom: calc(12px + env(safe-area-inset-bottom)); }
 }
 </style>
 </head>
@@ -1618,6 +1838,11 @@ footer a:hover { color: var(--sage-light); }
   </div>
 </section>
 
+<!-- ═══ STICKY MOBILE CTA ═══ -->
+<div class="mobile-sticky-cta" id="mobileCta">
+  <a href="#kontakt"><i data-lucide="message-circle"></i> Kostenloses Erstgespräch anfragen</a>
+</div>
+
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="container">
@@ -1703,7 +1928,6 @@ const results = {
 symptomItems.forEach(item => {
   item.addEventListener('click', () => {
     item.classList.toggle('active');
-    // Re-create icons for toggled items
     lucide.createIcons();
     updateSymptomResult();
   });
@@ -1711,8 +1935,6 @@ symptomItems.forEach(item => {
 
 function updateSymptomResult() {
   const count = document.querySelectorAll('.symptom-item.active').length;
-
-  // Hide all results
   Object.values(results).forEach(r => r.classList.remove('show'));
 
   if (count >= 1 && count <= 2) {
@@ -1722,9 +1944,26 @@ function updateSymptomResult() {
   } else if (count >= 5) {
     results[3].classList.add('show');
   }
-
-  // Re-init icons in results
   lucide.createIcons();
+}
+
+// ── STICKY MOBILE CTA ──
+const mobileCta = document.getElementById('mobileCta');
+const heroSection = document.querySelector('.hero');
+const contactSection = document.getElementById('kontakt');
+
+if (mobileCta && window.innerWidth <= 900) {
+  window.addEventListener('scroll', () => {
+    const heroBottom = heroSection.getBoundingClientRect().bottom;
+    const contactTop = contactSection.getBoundingClientRect().top;
+    const windowH = window.innerHeight;
+
+    if (heroBottom < 0 && contactTop > windowH * 0.5) {
+      mobileCta.classList.add('show');
+    } else {
+      mobileCta.classList.remove('show');
+    }
+  }, { passive: true });
 }
 </script>
 
