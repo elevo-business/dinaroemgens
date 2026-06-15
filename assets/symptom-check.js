@@ -45,6 +45,8 @@
       desc: 'Deine Antworten sprechen eine sehr klare Sprache. Kein Grund zur Panik — aber ein klarer Grund, dir jetzt Unterstützung zu holen. Der erste Schritt darf federleicht sein.' }
   ];
 
+  function navOffset() { return (window.innerWidth <= 600 ? 64 : 74) + 24; }
+
   /* ---- render questions ---- */
   var html = '';
   var qi = 0;
@@ -56,14 +58,14 @@
               '<div class="q-text"><span class="qn">' + String(++qi).padStart(2, '0') + '</span>' + text + '</div>' +
               '<div class="sc-opts" role="group" aria-label="' + text.replace(/"/g, '') + '">';
       SCALE.forEach(function (lbl, v) {
-        html += '<button type="button" class="sc-opt" data-v="' + v + '">' + lbl + '</button>';
+        html += '<button type="button" class="sc-opt" data-v="' + v + '" aria-pressed="false">' + lbl + '</button>';
       });
       html += '</div></div>';
     });
   });
   html +=
     '<div class="sc-actions">' +
-      '<button type="button" class="btn btn-gold" id="scEval" disabled><span>Ergebnis anzeigen</span> <i data-lucide="sparkles"></i></button>' +
+      '<button type="button" class="btn btn-gold" id="scEval"><span>Ergebnis anzeigen</span> <i data-lucide="sparkles"></i></button>' +
       '<span class="sc-hint" id="scHint">Beantworte alle ' + TOTAL_Q + ' Aussagen, um dein Ergebnis zu sehen.</span>' +
     '</div>' +
     '<div class="sc-result" id="scResult" tabindex="-1"></div>';
@@ -77,17 +79,17 @@
 
   if (window.lucide) lucide.createIcons();
 
-  /* ---- interaction ---- */
-  root.querySelectorAll('.sc-q').forEach(function (q) {
-    q.querySelectorAll('.sc-opt').forEach(function (opt) {
-      opt.addEventListener('click', function () {
-        q.querySelectorAll('.sc-opt').forEach(function (o) { o.classList.remove('sel'); o.setAttribute('aria-pressed', 'false'); });
-        opt.classList.add('sel'); opt.setAttribute('aria-pressed', 'true');
-        q.classList.add('answered');
-        answers[q.dataset.q] = parseInt(opt.dataset.v, 10);
-        updateProgress();
-      });
-    });
+  /* ---- interaction (event delegation = robust on touch) ---- */
+  root.addEventListener('click', function (e) {
+    var opt = e.target.closest('.sc-opt');
+    if (!opt) return;
+    var q = opt.closest('.sc-q');
+    if (!q) return;
+    q.querySelectorAll('.sc-opt').forEach(function (o) { o.classList.remove('sel'); o.setAttribute('aria-pressed', 'false'); });
+    opt.classList.add('sel'); opt.setAttribute('aria-pressed', 'true');
+    q.classList.add('answered'); q.classList.remove('flash');
+    answers[q.dataset.q] = parseInt(opt.dataset.v, 10);
+    updateProgress();
   });
 
   function answeredCount() { return Object.keys(answers).length; }
@@ -98,11 +100,28 @@
     if (fill) fill.style.width = p + '%';
     if (pct) pct.innerHTML = '<b>' + c + '</b> / ' + TOTAL_Q + ' beantwortet';
     var done = c === TOTAL_Q;
-    evalBtn.disabled = !done;
-    hint.textContent = done ? 'Alles beantwortet — zeig mir mein Ergebnis.' : 'Beantworte alle ' + TOTAL_Q + ' Aussagen, um dein Ergebnis zu sehen.';
+    evalBtn.classList.toggle('ready', done);
+    hint.textContent = done
+      ? 'Alles beantwortet — tippe auf „Ergebnis anzeigen".'
+      : 'Beantworte alle ' + TOTAL_Q + ' Aussagen, um dein Ergebnis zu sehen.';
   }
 
-  evalBtn.addEventListener('click', renderResult);
+  evalBtn.addEventListener('click', function () {
+    if (answeredCount() < TOTAL_Q) {
+      // guide the user to the first unanswered question instead of doing nothing
+      var firstUn = null;
+      root.querySelectorAll('.sc-q').forEach(function (q) { if (!firstUn && !(q.dataset.q in answers)) firstUn = q; });
+      if (firstUn) {
+        firstUn.classList.add('flash');
+        setTimeout(function () { firstUn.classList.remove('flash'); }, 1100);
+        window.scrollTo({ top: firstUn.getBoundingClientRect().top + window.scrollY - navOffset(), behavior: 'smooth' });
+      }
+      var missing = TOTAL_Q - answeredCount();
+      hint.textContent = 'Bitte beantworte zuerst alle Aussagen — es ' + (missing === 1 ? 'fehlt noch 1' : 'fehlen noch ' + missing) + '.';
+      return;
+    }
+    renderResult();
+  });
 
   function renderResult() {
     var total = 0, dimScores = DIMS.map(function () { return 0; });
@@ -149,16 +168,16 @@
       resultBox.querySelectorAll('.dim-fill').forEach(function (f) { f.style.width = f.dataset.w + '%'; });
     });
     setTimeout(function () {
-      resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 120);
+      window.scrollTo({ top: resultBox.getBoundingClientRect().top + window.scrollY - navOffset(), behavior: 'smooth' });
+    }, 140);
 
     document.getElementById('scRetake').addEventListener('click', function () {
       answers = {};
-      root.querySelectorAll('.sc-opt').forEach(function (o) { o.classList.remove('sel'); });
+      root.querySelectorAll('.sc-opt').forEach(function (o) { o.classList.remove('sel'); o.setAttribute('aria-pressed', 'false'); });
       root.querySelectorAll('.sc-q').forEach(function (q) { q.classList.remove('answered'); });
       resultBox.classList.remove('show'); resultBox.innerHTML = '';
       updateProgress();
-      window.scrollTo({ top: root.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
+      window.scrollTo({ top: root.getBoundingClientRect().top + window.scrollY - navOffset(), behavior: 'smooth' });
     });
   }
 
