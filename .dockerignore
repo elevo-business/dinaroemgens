@@ -1,6 +1,2 @@
 .git
 .gitignore
-Dockerfile
-.dockerignore
-nginx.conf
-*.md
