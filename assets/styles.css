@@ -525,3 +525,31 @@ footer h4{color:var(--cream);font-size:.74rem;letter-spacing:.16em;text-transfor
   .hero-tag .num{font-size:1.6rem}
   .story-figure img{height:420px}
 }
+
+/* ════════════════════════════════════════════════════════════════
+   ICON RENDERING FIX
+   Lucide replaces each <i data-lucide> with an <svg>, so CSS rules
+   that targeted `i` no longer apply. Re-declare for the generated svg.
+   ════════════════════════════════════════════════════════════════ */
+.btn svg{width:17px;height:17px;transition:transform .4s}
+.hero-trust svg{width:15px;height:15px;color:var(--gold)}
+.pain-row .pi svg{width:23px;height:23px}
+.tf .ar svg{width:20px;height:20px}
+.step .card h3 svg{width:20px;height:20px;color:var(--gold)}
+.svc .svc-go svg{width:20px;height:20px}
+.svc-card .ic svg{width:25px;height:25px}
+.svc-card ul li svg{width:17px;height:17px;color:var(--gold);flex-shrink:0;margin-top:4px}
+.proc .pi svg{width:24px;height:24px}
+.val .ic svg{width:23px;height:23px}
+.ct-trust svg{width:18px;height:18px;color:var(--gold)}
+.testi-card .chips svg{width:15px;height:15px;color:var(--gold)}
+.testi-hint svg{width:15px;height:15px}
+.faq-q .ic svg{width:18px;height:18px;transition:transform .4s}
+.faq.open .faq-q .ic svg{transform:rotate(45deg)}
+.sticky-cta a svg{width:18px;height:18px}
+.menu-btn svg{width:26px;height:26px}
+.ov-close svg{width:28px;height:28px}
+/* self-test checkbox — only show the check once the item is selected */
+.st-item .bx svg{width:14px;height:14px;color:var(--cream);opacity:0;transition:opacity .2s}
+.st-item.on .bx svg{opacity:1}
+.btn-gold:hover svg{transform:translateX(4px)}
