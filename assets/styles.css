@@ -654,3 +654,42 @@ body{line-height:1.65}
 .section-figure figcaption{position:absolute;left:16px;bottom:14px;background:rgba(42,35,22,.6);color:#fff;font-size:.72rem;letter-spacing:.05em;padding:7px 13px;border-radius:100px;backdrop-filter:blur(4px)}
 .figure-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
 @media (max-width:860px){ .figure-split{grid-template-columns:1fr;gap:32px} }
+
+/* ════════════════════════════════════════════════════════════════
+   CLIENT FEEDBACK v3 — readable nav CTA + more mint accents
+   ════════════════════════════════════════════════════════════════ */
+
+/* Nav CTA: high-contrast gold button with dark text (was hard to read) */
+.nav .nav-cta{background:var(--gold);color:var(--ink);font-weight:600;border:1px solid var(--gold)}
+.nav .nav-cta::before{display:none}
+.nav .nav-cta span,.nav .nav-cta i{color:var(--ink)}
+.nav .nav-cta:hover{background:var(--gold-deep);border-color:var(--gold-deep);color:#fff;transform:translateY(-2px);box-shadow:0 10px 24px rgba(142,108,30,.32)}
+.nav .nav-cta:hover span,.nav .nav-cta:hover i{color:#fff}
+
+/* ── More mint-green accents (growth / health), gold stays the brand ── */
+/* Inner-page headers get a soft mint wash */
+.phero{background:var(--mint);border-bottom:1px solid var(--mint-3)}
+
+/* Transformation: the positive "to" reads as fresh green growth */
+.tf .to{background:var(--mint);color:var(--sage-deep);border:1px solid var(--mint-3);border-radius:10px;padding:9px 14px;font-weight:600}
+.tf .ar{color:var(--sage)}
+.tf:hover{box-shadow:0 14px 30px rgba(111,156,130,.16)}
+
+/* Method timeline turns from sage (start) toward gold (goal) */
+.steps::before{background:linear-gradient(var(--sage),var(--gold-soft))}
+.step .node{background:var(--mint);border-color:var(--sage);color:var(--sage-deep)}
+
+/* Icon chips: process & values in mint */
+.proc .pi{background:var(--mint);color:var(--sage-deep)}
+.val .ic{background:var(--mint);color:var(--sage-deep)}
+
+/* Quick self-test (home) selected state → mint */
+.st-item:hover{border-color:var(--sage);background:var(--mint)}
+.st-item.on{border-color:var(--sage);background:var(--mint)}
+.st-item.on .bx{background:var(--sage);border-color:var(--sage)}
+
+/* Closing CTA block on a calming mint */
+.cta-strip{background:var(--mint);border-color:var(--mint-3)}
+
+/* Footer crisis note + small green touches */
+.kicker::before{background:var(--sage)}
