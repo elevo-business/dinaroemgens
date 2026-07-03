@@ -721,3 +721,21 @@ body{line-height:1.65}
 .overlay nav a.ov-ig .n{color:var(--gold)}
 .ct-trust a{color:inherit;border-bottom:1px solid var(--gold-soft);transition:color .3s}
 .ct-trust a:hover{color:var(--gold-deep)}
+
+/* ── Instagram icon in header ── */
+.nav-ig{display:inline-flex;align-items:center;justify-content:center;color:var(--ink-2);padding:4px;transition:color .3s,transform .3s}
+.nav-ig::after{display:none}
+.nav-ig:hover{color:var(--gold-deep);transform:translateY(-1px)}
+.nav-ig svg{width:20px;height:20px}
+
+/* ── Symptom marquee (moving slider) on mint green ── */
+.marquee{background:var(--mint);border-block-color:var(--mint-3)}
+.marquee-track span{color:var(--sage-deep)}
+.marquee-track span::before{background:var(--sage)}
+
+/* ── "ausgebrannt" marquee — bold, section-like band ── */
+.marquee{padding:28px 0}
+.marquee-track{gap:52px}
+.marquee-track span{font-family:var(--serif);font-weight:700;font-style:normal;font-size:clamp(1.5rem,3.4vw,2.5rem);letter-spacing:0;gap:52px;color:var(--sage-deep);text-transform:lowercase}
+.marquee-track span::before{width:8px;height:8px}
+@media (max-width:600px){ .marquee{padding:20px 0} .marquee-track span{font-size:1.5rem;gap:40px} .marquee-track{gap:40px} }
