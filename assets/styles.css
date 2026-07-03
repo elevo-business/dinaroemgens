@@ -794,3 +794,21 @@ body{line-height:1.65}
 
 /* Two services now — center the cards on wider screens */
 @media (min-width:861px){ .svc-cards{grid-template-columns:repeat(2,1fr);max-width:860px;margin-inline:auto} }
+
+/* ════════════════════════════════════════════════════════════════
+   MOBILE UX v6 — fix horizontal overflow + polish
+   ════════════════════════════════════════════════════════════════ */
+/* safety net: never allow horizontal scroll (clip keeps sticky working) */
+html{overflow-x:clip}
+
+/* Transformation pairs stack cleanly on phones (was overflowing) */
+@media (max-width:600px){
+  .tf{grid-template-columns:1fr;justify-items:center;text-align:center;gap:10px;padding:20px 18px}
+  .tf .from,.tf .to{width:100%;min-width:0}
+  .tf .ar{transform:rotate(90deg)}
+}
+/* grid items should shrink, never force overflow */
+.tf>*,.hero-content,.story-content,.ct-text,.pain-aside,.st-aside{min-width:0}
+
+/* hero decorative ring smaller on phones so it can't spill */
+@media (max-width:560px){ .hero-figure .ring{inset:-12px} }
