@@ -693,3 +693,22 @@ body{line-height:1.65}
 
 /* Footer crisis note + small green touches */
 .kicker::before{background:var(--sage)}
+
+/* ════════════════════════════════════════════════════════════════
+   FIX v4 — nav CTA padding was overridden by `.nav-links a` (4px 0),
+   which pushed the text out of the pill. Restore padding; white text.
+   ════════════════════════════════════════════════════════════════ */
+.nav .nav-cta{
+  padding:11px 24px;
+  background:var(--ink);
+  color:#fff;
+  border:1px solid var(--ink);
+  border-radius:100px;
+  font-weight:600;
+  line-height:1.1;
+  white-space:nowrap;
+}
+.nav .nav-cta::before{display:none}
+.nav .nav-cta span,.nav .nav-cta i{color:#fff}
+.nav .nav-cta:hover{background:var(--gold-deep);border-color:var(--gold-deep);color:#fff;transform:translateY(-2px);box-shadow:0 10px 24px rgba(142,108,30,.3)}
+.nav .nav-cta:hover span,.nav .nav-cta:hover i{color:#fff}
