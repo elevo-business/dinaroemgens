@@ -774,3 +774,10 @@ body{line-height:1.65}
 .marquee{padding:clamp(20px,3vw,34px) 0}
 .marquee-track span{font-size:clamp(2.6rem,6.5vw,5.2rem)}
 @media (max-width:600px){ .marquee-track span{font-size:2.4rem;gap:36px} .marquee-track{gap:36px} }
+
+/* Logo inside the story badge */
+.story-figure .badge{padding:14px}
+.badge-logo{width:66px;height:66px;display:block;border-radius:50%}
+
+/* badge logo must not inherit the story-image aspect-ratio */
+.story-figure .badge-logo{width:66px;height:66px;aspect-ratio:auto;object-fit:contain;border-radius:50%}
