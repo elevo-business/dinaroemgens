@@ -1,0 +1,41 @@
+name: Deploy to Coolify
+
+# Löst bei jedem Push auf main automatisch ein Coolify-Deploy aus,
+# damit Änderungen (z. B. von Dinas Claude Code) sofort live gehen.
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}      # erlaubt auch manuelles Auslösen im Actions-Tab
+
+concurrency:
+  group: coolify-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Coolify deployment
+        env:
+          # In GitHub setzen: Repo → Settings → Secrets and variables → Actions
+          COOLIFY_URL:   ${{ secrets.COOLIFY_URL }}     # z. B. https://coolify.deine-domain.tld  (ohne / am Ende)
+          COOLIFY_TOKEN: ${{ secrets.COOLIFY_TOKEN }}   # Coolify API-Token (Keys & Tokens → API tokens)
+          # App-UUID ist NICHT geheim. Vorbelegt aus dem letzten Deploy-Log; per Repo-Variable überschreibbar.
+          COOLIFY_APP_UUID: ${{ vars.COOLIFY_APP_UUID || 'twxo2a3mbh47r5pwim0xzf5c' }}
+        run: |
+          set -euo pipefail
+          if [ -z "${COOLIFY_URL:-}" ] || [ -z "${COOLIFY_TOKEN:-}" ]; then
+            echo "::warning::COOLIFY_URL und/oder COOLIFY_TOKEN fehlen noch — Deploy übersprungen. Siehe DEPLOY.md."
+            exit 0
+          fi
+          echo "→ Coolify-Deploy für UUID=$COOLIFY_APP_UUID"
+          code=$(curl -sS -o /tmp/out.json -w '%{http_code}' \
+            "$COOLIFY_URL/api/v1/deploy?uuid=$COOLIFY_APP_UUID&force=false" \
+            -H "Authorization: Bearer $COOLIFY_TOKEN")
+          echo "HTTP $code"; cat /tmp/out.json 2>/dev/null || true; echo
+          case "$code" in
+            2*) echo "✅ Deploy angestoßen.";;
+            401|403) echo "::error::Nicht autorisiert ($code) — API-Token prüfen."; exit 1;;
+            404) echo "::error::Nicht gefunden ($code) — COOLIFY_URL / App-UUID prüfen."; exit 1;;
+            *)  echo "::error::Coolify antwortete mit HTTP $code."; exit 1;;
+          esac
