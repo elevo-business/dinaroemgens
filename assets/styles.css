@@ -784,3 +784,10 @@ body{line-height:1.65}
 
 /* "AUSGEBRANNT?" — uppercase in the marquee */
 .marquee-track span{text-transform:uppercase;letter-spacing:.02em}
+
+/* Image bands: much lighter overlay so the photo colours show through;
+   only a soft dark gradient behind the text + text-shadow for legibility */
+.band.has-img::before{background:linear-gradient(90deg, rgba(20,15,6,.60) 0%, rgba(20,15,6,.30) 48%, rgba(20,15,6,.08) 100%);opacity:1}
+.band.has-img .q-mark,
+.band.has-img p,
+.band.has-img .who{text-shadow:0 2px 16px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.5)}
