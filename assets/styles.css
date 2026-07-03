@@ -769,3 +769,8 @@ body{line-height:1.65}
 .ig-svg{width:20px;height:20px;display:inline-block;vertical-align:middle;flex-shrink:0}
 .nav-ig .ig-svg{width:21px;height:21px}
 .ft-social .ig-svg{width:19px;height:19px}
+
+/* "Ausgebrannt?" marquee — large */
+.marquee{padding:clamp(20px,3vw,34px) 0}
+.marquee-track span{font-size:clamp(2.6rem,6.5vw,5.2rem)}
+@media (max-width:600px){ .marquee-track span{font-size:2.4rem;gap:36px} .marquee-track{gap:36px} }
