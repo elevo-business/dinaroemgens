@@ -781,3 +781,6 @@ body{line-height:1.65}
 
 /* badge logo must not inherit the story-image aspect-ratio */
 .story-figure .badge-logo{width:66px;height:66px;aspect-ratio:auto;object-fit:contain;border-radius:50%}
+
+/* "AUSGEBRANNT?" — uppercase in the marquee */
+.marquee-track span{text-transform:uppercase;letter-spacing:.02em}
