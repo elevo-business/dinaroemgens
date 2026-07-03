@@ -791,3 +791,6 @@ body{line-height:1.65}
 .band.has-img .q-mark,
 .band.has-img p,
 .band.has-img .who{text-shadow:0 2px 16px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.5)}
+
+/* Two services now — center the cards on wider screens */
+@media (min-width:861px){ .svc-cards{grid-template-columns:repeat(2,1fr);max-width:860px;margin-inline:auto} }
