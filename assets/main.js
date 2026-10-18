@@ -88,3 +88,13 @@
     }, { passive: true });
   }
 })();
+
+/* top announcement banner — dismiss (persisted) */
+(function () {
+  var tb = document.getElementById('tbClose');
+  if (!tb) return;
+  tb.addEventListener('click', function () {
+    document.documentElement.classList.add('no-banner');
+    try { localStorage.setItem('tb_hidden', '1'); } catch (e) {}
+  });
+})();

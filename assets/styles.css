@@ -812,3 +812,100 @@ html{overflow-x:clip}
 
 /* hero decorative ring smaller on phones so it can't spill */
 @media (max-width:560px){ .hero-figure .ring{inset:-12px} }
+
+/* ════════════════════════════════════════════════════════════════
+   THEMENWELT — top banner, download cards, email modal
+   ════════════════════════════════════════════════════════════════ */
+:root{--banner-h:44px; --forest:#2E463B}
+
+/* Top announcement banner (fixed, above the nav) */
+.topbanner{position:fixed;top:0;left:0;right:0;z-index:85;min-height:var(--banner-h);
+  display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;
+  background:var(--forest);color:#F3ECD9;font-size:.84rem;font-weight:500;letter-spacing:.01em;
+  padding:6px 46px 6px 18px;text-align:center;line-height:1.35}
+.topbanner svg{width:16px;height:16px;color:var(--gold-bright);flex-shrink:0}
+.topbanner a.tb-link{color:#fff;font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold-bright);white-space:nowrap}
+.topbanner a.tb-link:hover{color:var(--gold-bright)}
+.topbanner .tb-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:0;color:#F3ECD9;cursor:pointer;padding:6px;line-height:0;opacity:.8}
+.topbanner .tb-close:hover{opacity:1}
+.topbanner .tb-close svg{width:16px;height:16px;color:currentColor}
+html.no-banner{--banner-h:0px}
+html.no-banner .topbanner{display:none}
+
+/* push the fixed nav + first-section content below the banner */
+.nav{top:var(--banner-h)}
+.hero{padding-top:calc(var(--banner-h) + var(--nav-h) + 40px)}
+.phero{padding-top:calc(var(--banner-h) + var(--nav-h) + 56px)}
+html{scroll-padding-top:calc(var(--banner-h) + var(--nav-h) + 14px)}
+.sc-progress{top:calc(var(--banner-h) + var(--nav-h))}
+.pain-aside,.st-aside{top:calc(var(--banner-h) + var(--nav-h) + 24px)}
+@media (max-width:600px){
+  :root{--banner-h:52px}
+  .topbanner{font-size:.78rem;padding:6px 40px 6px 14px}
+  .hero{padding-top:calc(var(--banner-h) + var(--nav-h) + 26px)}
+  .phero{padding-top:calc(var(--banner-h) + var(--nav-h) + 30px)}
+}
+
+/* Themenwelt — how it works */
+.tw-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+.tw-step{text-align:center;padding:4px}
+.tw-step .n{width:46px;height:46px;border-radius:50%;background:var(--mint);color:var(--sage-deep);display:grid;place-items:center;font-family:var(--serif);font-size:1.3rem;font-weight:600;margin:0 auto 12px}
+.tw-step h3{font-family:var(--serif);font-size:1.12rem;font-weight:600;margin-bottom:5px}
+.tw-step p{font-size:.92rem;color:var(--ink-soft)}
+@media (max-width:640px){.tw-steps{grid-template-columns:1fr;gap:16px}}
+
+/* Themenwelt — download cards */
+.tw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.tw-card{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--cream-3);border-radius:var(--radius);overflow:hidden;transition:transform .4s,box-shadow .4s}
+.tw-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.tw-cover{aspect-ratio:3/4;background:var(--forest);overflow:hidden}
+.tw-cover img{width:100%;height:100%;object-fit:cover;display:block}
+.tw-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.tw-body .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
+.tw-body h3{font-family:var(--serif);font-size:1.28rem;font-weight:600;margin-bottom:2px;line-height:1.2}
+.tw-body .sci{font-style:italic;color:var(--ink-light);font-size:.85rem;margin-bottom:12px}
+.tw-body p{font-size:.92rem;color:var(--ink-soft);margin-bottom:18px;flex:1;line-height:1.6}
+.tw-card .btn{width:100%;justify-content:center}
+@media (max-width:900px){.tw-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.tw-grid{grid-template-columns:1fr}}
+
+/* Email modal */
+.modal{position:fixed;inset:0;z-index:130;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-bg{position:absolute;inset:0;background:rgba(42,35,22,.55);backdrop-filter:blur(5px)}
+.modal-card{position:relative;z-index:1;background:var(--paper);border-radius:22px;max-width:460px;width:100%;padding:clamp(26px,4vw,40px);box-shadow:var(--shadow);max-height:92vh;overflow:auto}
+.modal-card .m-close{position:absolute;top:14px;right:14px;background:none;border:0;color:var(--ink-light);cursor:pointer;padding:6px}
+.modal-card .m-close svg{width:22px;height:22px}
+.modal-card .m-cover{width:84px;aspect-ratio:3/4;border-radius:10px;overflow:hidden;background:var(--forest);margin-bottom:16px;box-shadow:var(--shadow-sm)}
+.modal-card .m-cover img{width:100%;height:100%;object-fit:cover}
+.modal-card h3{font-family:var(--serif);font-size:1.5rem;font-weight:600;margin-bottom:6px}
+.modal-card .m-sub{color:var(--ink-soft);font-size:.95rem;margin-bottom:20px}
+.modal-card .fg{margin-bottom:14px}
+.modal-card label{display:block;font-size:.8rem;font-weight:500;margin-bottom:6px;color:var(--ink-2)}
+.modal-card input[type=email]{width:100%;padding:14px 16px;border:1px solid var(--cream-3);border-radius:12px;font-family:var(--sans);font-size:16px;background:var(--cream);outline:none;transition:border-color .3s,box-shadow .3s}
+.modal-card input[type=email]:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(184,144,47,.1);background:var(--paper)}
+.modal-card .consent{display:flex;gap:10px;align-items:flex-start;font-size:.8rem;color:var(--ink-soft);margin-bottom:18px;line-height:1.5}
+.modal-card .consent input{margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:var(--gold)}
+.modal-card .consent a{color:var(--gold-deep);border-bottom:1px solid var(--gold-soft)}
+.modal-card .btn{width:100%;justify-content:center}
+.modal-card .m-note{font-size:.76rem;color:var(--ink-light);text-align:center;margin-top:12px}
+.modal-card .m-success{display:none;text-align:center}
+.modal-card.done .m-form{display:none}
+.modal-card.done .m-success{display:block}
+.modal-card .m-success .ok{width:60px;height:60px;border-radius:50%;background:var(--mint);color:var(--sage-deep);display:grid;place-items:center;margin:0 auto 16px}
+.modal-card .m-success .ok svg{width:30px;height:30px}
+
+/* with the extra Themenwelt link, collapse the desktop nav a bit earlier */
+@media (max-width:1040px){ .nav-links{display:none} .menu-btn{display:flex;align-items:center;justify-content:center;min-width:44px;min-height:44px} }
+
+/* banner: single line, ellipsis instead of wrapping (stable height) */
+.topbanner{flex-wrap:nowrap;white-space:nowrap}
+.topbanner>span{overflow:hidden;text-overflow:ellipsis;min-width:0}
+.topbanner svg,.topbanner a.tb-link{flex-shrink:0}
+@media (max-width:600px){
+  :root{--banner-h:46px}
+  .topbanner{font-size:.76rem;gap:7px;padding:6px 38px 6px 12px}
+  .topbanner .tb-extra{display:none}
+  .hero{padding-top:calc(var(--banner-h) + var(--nav-h) + 26px)}
+  .phero{padding-top:calc(var(--banner-h) + var(--nav-h) + 30px)}
+}
